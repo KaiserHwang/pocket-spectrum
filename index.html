@@ -1,0 +1,1843 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>포켓 스펙트럼</title>
+<meta name="application-name" content="포켓 스펙트럼">
+<meta name="apple-mobile-web-app-title" content="포켓 스펙트럼">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="theme-color" content="#0d131a">
+<link rel="icon" type="image/png" sizes="192x192" href="data:image/png;base64,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">
+<link rel="apple-touch-icon" sizes="192x192" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMAAAADACAYAAABS3GwHAAAkw0lEQVR42u2deZylVXnnv885792X2ru76JatVbRpGmjAgCYBUUA0LhmXD8Zl3HDIosYxmpjVJE40ziQGNepo1EjMmBHNZFd2JAFE4hICGBY1CNgL3VW3llt3e9/zzB/ve2/dqq6q7oa6l66q8/t8+tM0tdzt93v25xyhP7CAAGH3/xwc3HJCFNidqDsXlU3AmaABIruSn/FYP4hQvQskBL6D6H7EfMOG0d2Vyt6HFn1vACgQ9fpJSY9/twFc8mIYGRkpNclcoMgFwHmgp4pIuf0ktP2Tqp4u6xEiC0ingKpOg9wD3C7ozWkaNx88eHBmOQ6tBQG0n3RHveXh8YsR82pFLxKRrfG3KBoTXZMX2P18jGfLuoRbZOsMICJCFyceFeQ61H1xemLPtYuiiFUXwmoLwM4Tf0e6NFx5rYq82QjPBkkIry55IW2hiOfFhoZ2EduAmFgQilNuE9XPzEwMfgHubR7KsWNHAG0JuzbxEd4pYnYmqm7Hc9YT3uMIBBEBNnYNgqq7G+XDXUIw7QjqWBBAR5Gl0a2XovohEbNTUVCNuiy9h8fjCZkUESttIYi8Z+bAo19dLW/wRAUQAGFu5CnHBYR/JGIui3NYT3yP1ReCiNiYX+6vQoJ31Q4+/OM2B/stgE7IUx4av0SNfE7EjKs655NYj14n0SLGqLo94vSN05N7rnkiIdHjqbV3Hqw0Mv4+MebPECmhGvoY36PHSAyvhogMiJHXpnNFadZmb1rEzZ55AAO4gYHjh1wQfVJEXuWtvseT7w30Sya0V0xN/WiS+b7Bqgtgnvw2vEasOUedawEp/1l4PIloiTEpjdydJgouOVoRyOMivzHnqHryexxDIhCTUnf0IpDHSf4wyb49PI4VhCImOFoRyJEIZGDg+EFPfo81KIJK8v91Jeu+EiygLmh9uivs8eT3OFYRqLqWGHOOC1qfTohvD0fwZX8ZEJZGxt8nYn/ex/weawQWtCVid6ZzBWnWZm9MuOyOJgSyQFQYHr/IGnOtxjV+b/k91lg4JEHk3MXViT3XsczYhCwTFmlh8+YxE9q7gE10JvU8PNYM2hPH+10Q7aru2/cYnYHNlXMAAdSE5mMiZnPyA578HmsNBnAiZrMJzccSIy6H8wAWiMrD4xdjzDXJUJtfTfRYy4hExOLcJcmCzYJQyCy2/PDUjIOPoEsrxsNjjUFQ1MFH4KmZxZ7ALHYZpeG5y4yxp8Q/40Mfj7UfCinqjLGnlIbnLlsc0psu6+9gR1rR9yYbXN76e6wbL6Cqquh7YUe6K0HuCMAAWhqu/Jwx9hS89fdYdwlx2wtUfo6uqmab5EmrWH/Rn0nisX6hGnN8nvMmyYpdYWTrhWLM7iT88ZUfj/UGq6oqxuwujGy9MAmDbOdYEqvuDSBHtUzg4bHG4EBMzPU4NzBANDa2o6hwsarDW3+P9e0FHAoXj43tKAKRAbSuU+eL6XR9N2z1R+ic3uexfj9iJ8ZsruvU+YAaAI30ecknv2HDH2vAKYRREhh6rN8wSCTmfJIEG2P0vKQOtCE/eiMwNeewBkpZQ6XqfBNkHX/cKBij5wFGBge3nBAa8+8iUkpKoLLRyD9bV156ZoHf+dkRynnhkzdM8eFrKmTT4ovC6w8KIqo6Ezh3moms2SVmY5JfBJqhctJYwMffsImd29KMFgM++OoxLj09T7XufDi0LvMAVTFSiqzZZXB6lrRjo40W94tQqymXnVti86DlwGxEvaWEoXL5+YNEKj06ld7jyc4D4oxXzzKIbN3AvhAxMFSwqMbJrzUQRcrmActg3hA69ZWh9RsCbDUKu7XjGjaYAFQxgXDqcWmcA0Hie5wiGB+0lLJC5D3AuqR+cpDobgO64e1btETw55zvCWwAEyhGRHYlpY4NWwIN7HyoLwLNSNlUtpwynqbRVIwXwrr72FFFRHYFbNDRhzbRx0qWp21J01xE9PZ/65Mkym7vE/nprJ7VQTb8USfWLPQA3QIZzJu+K0AEai2l2YqTbxEoZo3vR/TMFWzkTChJeBdbWKdKEAinbcugSXLcL8vfbClP25TiM2/ZzN+84zgufGaeug/DeoYN6wFEoJVUewZyhkgPTXqbYX+fT+QgkxK+cMU4Z2zP4pqO55+a5znvf5h7Hm2STwvOewLvAVbL+rciZXwooJwVoi5mCYJzsHNrGhO0r3ftcSgmwmzN8YafKnPGiWn2T7Q4MBuRTQvv/ZlhIueXtL0H6IEI6i23ZJKpCkMFg/SzGaywuRzEJ7qaWIiqUM6ZuIHv+eo9wGoTbrhgMcu8C/2svjhVbErYuTWNi5KmXDKrdPxIwGjBd6W9AFbV+gvq4LRtWYKU4BaFOZIIoN8xdyqQBc/BOSjnDdmUj/+9AFbX+CMGpmtRp+R4NAlyT56TLu11osj3ArwAehD/q4Nc2pAKFs79txPkLYP2kAS5J89FIHTKaNFw8qaAZrhQkMv1KlaVCDI/DLiRRsA3/LR72i5d5Rcg7GMI5BSyKaGcM52Kz+G61aspwFpLqVQdU3OO6ZrbMH2HDVsFaiedpx+fJoqWbnb1kwMCNKM49FpslaxAqkcewAg0kubbf790iNGS5aPXVrj5P2oUMus/79jwoxApK4fNFXpO/iTnOC7JOcJFOYcSV4N68bhLNd8uOjXP8z/0KHd+v05+nYtgw4dAK/W4jEDQh3GglZpyClgrnDiWjrdZV9EvtZtvb/zpgfnm20xEJiW859KhDdF829ACcEnVRZawjP2IvReLYKmmnKpiDJw4moqPLF51C5AM/SXJdjoQqnXlWduznDgWUAvXd+9hQwpABCKFgZxhfNDSipYuc/bLA7SJ2G7KLfV4YQ9W01yyEXfKlq6NOIFW5NgyYHnuM3M0GopdxwrYsB4gcko5K2wZtLQiXdbV9yUH6DTlMgTLzB451ztjMFxYPG4tKHDpriLG9mcWygvgSQqBwsPEudJXUS4tDufg1B4O5oXR0rlRPi3rfgZpwyfBhyN42McO7HJhTi8H8xavhHZyoFA5YXT9zyBteA+wnEHVPi7FKGCsxInuMpWepaz0Ew19lkv023NQAxtgBmnDJsHNUDl5U8BocWkLp8n3DRV6nwWrKmLghNHUkrG+ElvpXlSirCyzEkrcm2hF67sUujEFkCSVpZwhcxgL92SHQEag2VSetiXNWMnSjFY3HHG69LjHUqMZXgDrLQRyh78RrV9vkOrylZ62B1jtIbXO75VDPeRKw3leAOsERzJi3A8P4DQeRyjlTFKPX/q5hqsYjhyJZ1Htz5WJT+bFJBtXAEdQWenHWuThrO2RNu2eiAdYKbdorXIDTkjGu03cdFt8MYk10tdx7A2aAxy+8dSP+vshIZAu56mOrGm3WnlHWxxHOoO0mNTt3QLTtV9gDAQ2zrcqVcfkTEgYwXQtPoK+nBMqVUdlNmJqrn8XlGzoadAjCYFcn5Lgw8kr0h5UZJLxi6U8XHsG6eSxVOeL7UV9RyzC9oUSYQTTVQcOcjkhjKAVxj/vklvnjIALlYGC5S0XDLCpbPnczVM8f0eB979ilFLW8MkbKxyYdYyWDB+7fqovOwleAKuQKK9KKGJWDkWEeHlnNWJ/ZN4Lnrq17QWXOA04uTpKw5jwk7PxG2Zs7K2MxO/PYN7wlgsGGC1ZvnDrNEMFwy9fMsRQwfBXt85wwc48W4cCvvqdKpecXuBlzyqCwqt/okQxazhxNKDaVP7glaOYQNhfCfmLW2eYrkcY6e0tPRtSAE4VGwg7t80PgS1FuCMtla5mMjq3xOSpUyWVMpxxQoZ//HY1eb664LnG954c+rtl0Rmncw0lcspQ3q4Ya4sIrZbyE9uzjA0HVBvKWy8coJQz3HZ/jTf+dJktAwEfuabC5c8d4FXPKUEEl59fppAxbB4McJHy0jOLnSf5kjML1JvKxFSEU2X75hRhpExUXWcxR4lHMLYMWH58oMXQgF31JqD3AAkhBlY4c7O7WTZWNDw2G5GyvbFGR+IBSDxAO77WRSGIc5AJBEVRBSNCtenihX+TVFqA04/PMJi3/Mv9NaKWcvZJ2SU34mz77rTdBZ4xvo0H97V4yVkFcFBtajwnBFy8M0/oYHIqwjlly0BA5JSDM+Ehv1NRjMRJrkVotLQTWrUfs+1ZPvyaMX7rKwf55oN1Mj08EW+DeoC47JjLyCFlR1kUj4cujr17UfprP/Di06CXTVgduJYyWXU4jatFLqkQFdOGvZMhJMlm2HTs2JbmXS8cYqxk+ZOvTvKTz8jxay8aJrDC331nlgOzEc9+WnbZu9CMwPSc48TRFE/fkmZiJgIEY2Cyqh1DIcn3Givx5prECfEyr3qBkVnqMest+Oln5ChlDY1IyfawDLfhBBDPuytjRcv2zakFZcf2bFB7B6C7GzpRjZDD7OV2hyJCXPkQhEi1cwWTJKPGYaQ4B/mMEDWV6bpbQQTxF0aLhhO3pHjfK0YZKhiu/Nokw0XLb750hHLO8JmvT7GpbDn1+AyPPNbirJOy7Dwhg2spF+7IxzM+qtQbysvOKmIFputu5a04E3vCRkuxXaReLnx6vCVa5+gkzfm08J0fNrj5ezWKWdPTI2E2pAdoz7m0G0tKvAn1yMEWk3OO04/PUGtqpz6/fXPA/Xvjw2lFFpK6M0AmXaFISmiFuqAyEpi4zNdW0GDRkEsZ9hxoccpTMrzj4qFlPY0VqDeUC56R4/xn5Dj95CyuqTxvR76ztNOK4P2vGOl0lO0pOapN5WAlREQOuftgas4tS2Sn85a9Y+UfB7Fd1/vT/Tudm5+1aqOUM1QbsWfLFixf+ddZqnXHUNES9nAaL9iI5A8jGB+Kz/xp75qbLlGYRR9iI4ytn9OEOF2krjbixC2KlIF8EopMtDrlvrGS5apbp6lUI9564QD5tKFSjXjbRYMMFyx/dvMU/+WcIru3Z5mYihYQMnLz4VG9pTx1cxqAg5NhXG83cWhQZ36lsjvMiEedl2buSha8lDHUmo5WdOj3tfOOdt/CmOVJnUsJ9STOL2YN9aYjTAoL1swv+qvCdXfP8eynZRnMW7582wwfvb5CMRcbGl8GfQIxdsdKJyW7wMZv/FgpPoFhuh5b8kxKuG9vk8hBKsiijTiOsQKjRUs4G2FzqQ6p/+LWaSqzEWeflMEIbBsK+PWXDDOYt3zi+grnbM/y8vNK4OC//mSZqVrEs07OQkKcVqREDt7/yhFm646JqXBBiKHE5cVqw3W6pG3CLCB1l6V+vKuL8W60MliIy5j/+ViLd//MMOW0MJuESJK8l9bEneuUFQayhpl6vMfcTWpNXsB9e1s8fUsKgG88UOOU8TRjZcvV35zl+rurXPG8QUaLlj+9ocIffa3C7hMyFLPCrffXSQWCNb2/qFxKI8etyWnvtmXstpIsrowopAOoJqW/Us5QTT7Ql51d5C//2xbmmrEAhouGL90xy7cfqvPBy8Y4OB1iRbBWmGs4PvT3E+w+Octrzi9DCPfvaTI5G3HqtgwQe4h2KJLPxJZvrqGoKrl0TI5qY95Cd8IBjSsjIotKsMCnbpridc8pM1q0zDYe32FVbTIuvnKp+9/ZVEy0fN5w8Qce4bpvV9m5PctPPj3Lla8ZA4QoUlKBMJOEJXsnQ77+vTkuOq3AYN7w5Tu7SF2yfOy6Cp/++hS7npJBBO54oM4zt6UZzFtuvb9Gs+kYLFkygbBvKqKcN9Sa8edUzJqOZ+i5oTyWBLASqRd+iEK14TqkrjfjJK07Vi3nDNlUXBnZfVKGoYLlxrvneNnZRX77Z4fZMhCQS0mHEMMlwx/+wyT7piL++HVjHJwKCRILlAqEbCoWQuhia5lPGwILtea8xWuLrx3vdu4ZS752JARuRUo5Z7npe3O84AOPsPOkDH/2pi2cfnya2jKnU2g7iZT5vkG816sEyWxNI1QkqeAM5k2n5q4KD+xtUc4ZPnlThSuvrcSvtak0G8pl55X4tRcPMZi3fPyGCl+7a46dx6f5/t4WdzxQ56ztWco5sySpC1lDvRUbnGJ2IcGtifOktpFqf+ZtT923SKGfAlhcGWlPASafV6dJsxSprZF4DkZAI9h9UobBguXr987x9C1p3v2iIUZKliuviT/AP3jVCBkrfPehBheflqecM3z1rjl2n5hh62DAdM11KjqhU0YGAt725/uJnPLxN23uCICueLc7Hj4aUh+xtVZIp4R8znDJBx/h5v+o0aw7Xnx2kb9++ziVOReLMnncyGnSQ4grVe14O5eWTlWlUnXMNR3HDQegMDHr+MN/nODlZxcZHwz4aGKp26Qt5cwCY1Spus5m2L6piFQQEzcIhGJGOt51KVJ3rpqVLoF2EXy5Bl4/0bccoF2z7q6MRC6OGQMjOKecccISpC5aPnJdhf3TIe98wRD5lKEyF3HZuXEb/W//dZanbkmz6+QMrqk8f0eeVqTk0vFMyinjaWbqjpm68sLTC8w1HBPVJereSVx+9yNNXBiHJd3PfamZeXkc4Uh3PK1dSWTk4th+byXkU38zzS331cilhExgueP7dfZMRTxlKMVc08Vn9zQcw4V4lPPAdMhVt85w7vYsKQufvWWaLYMBJ40F/NFXK+yZDHn3i4YYLVo+dn2F675b5dM3T5HustStUBkszJccXdJpGywYwghm6vHXVUEy0jnJOl6cjwUXRrGHMmZ+zER1vrHidGGTReFJ37jviwcwydF/VuCyc0uMJEnkUMFw4qY0ew6GvOTMAr/ywiFSgfD335ontSaxdCNUhoumY0mmk+SrnIvdea3pOuW+ttja4Ug3yZZrOmUC4Sd+72HKWcMtv76NiaojsEdvwRdURrRtqemEI9mU0AiVTCBkUsL0nKMZKaMjAZ+/YZqf//x+GqGjkJm3xLWm8uIzCvz2y0YYyBs+fkOF6/99jl+4aJBNZctHrq1w/d1zbBqMn/D+SlzKij1uHAJ13zo5kLeHWOqVuHgsWOo1KwCRuESYTRuu/sVxnrszDwo/2NcknzFsGrBUay4pMyqtML4QYgGpTVtE2mmvr0Rq5cits2o8YrBvJuTZv/8wcw3llt94Cqcfn2FiNlpQ5+9OzNql6aQS2ckL8mlhuuZwSRmwESrlrOkMlj2wr8X2zSnufaTJvz/c4NXnlShkDP/0b1Wu+Px+JmYj8hmzYEzZSDw2HOc1sdUOrMS7zMlzK+cMrTB+Lu2RiBWT4HVM6mNKADaJQ6987Rhvf+EQj02EGIFs2uCcdmrN7Q9iqST4aEl9pKFI2zqXc4Yb7pnjpVf+GCEOmz71ps3sekq6Y9WboeKckklJx5IrdDqkqaxwz382uOP7dX727CIDOcOXvjnDh/9pksufN8jmsuXKayt84/t1jh8NeGw64kAl4qztGco5yz/fVyNl44bcUn0faxZWttST+tgXQNt979iW5uvv3daJAUUWEn41k8huS+26/t0OSbpDkWpDaTll85Dl1754kD/8uwlGypbpuiOfFs44IUOjpbzrBUO84tklULjrP+u890sHecWziowU4ph6fDBg23DAVbdOxyMI23OUc4bbHqjRirQTjolAIWNohHEdPWW7qllZ0xHmkfQ2PNaAAAIjTE5HfOLNm7jiwgEOzkbLDEkdOal1EZnbyaomczv1luI0CUcycVVCJB7SyiWjDJU5xw8fa3HG8RkkEP7j4QYX/89HOZBMfLZDq1ortvrlnOGVzyoxWrT8n9un+dHBcL4BJfFNM+3EPhOYDqmLWXNIstz2bguqSH0u/Xn0QQAi8VbQcUMBN/7qNkaKtlPGXEzwNpnalYPuJDITLCR1YKDlYrJbE4cgTuNz/n/4WIuTx1LYjHDPQw3+5f4aZ5yQ5d8eqvP5W6Z5w/kDbBmIQ5F//X6dVyUJ+Rdum+bATES666qktsVuz/jM1pPqVTZOXg+1zovmgzypvQAaLeXLbxvnBbsKTFWjzk6oSRbB0fiOrshpPCOSjTumM3WHc3E9+0cHw5jUaeG+R5pMzUUcNxjwjR/UufW+Gq95TplNJcsnbqrw2RunefHZRTaV4yrTIwda5HOGRhiv+HWHIvmMYbY2X5JdadZ/qclODy+Awya/U1XHWy8c4JOXb6YyFSWEjxchyvm4tPODvU0KGcOmsuX/3jHDo5Mhb70gHhr762/N8otX7efFZxbYXI5j7HY1ZP90RKvhGCwHZALYNxVXT+Ya86TOBvGpb/NrgPNoN4o8qb0AevrRt0Ll918+whUXDpBLG67+5gx//LUKP3VKjsDAX94+w2jRMlK0/PP9NVot5ayT48rIrffXMAbqTV0wgRk6jbejFnceE+/iSe1xTAigPWs/U3PsPjHDQN5y6wM1okiJktn3XFaIojgkKmUNIrIgiWxXk7pJvaCK5CsjHseyB2iHQ90zIyJgkoCkPRPUnTT6JNKjX+jLLNDimRFVcCy8CK67D794ZsTDY00LwJPa41iF8W+BhxeAh4cXgIeHF4CHhxeAh4cXgIeHF4CHhxeAh4cXgIeHF4CHhxeAh8f6wbFxOO56vYXZ4zDQJ30+7MkTgBHEGDSK0FboubABIdYgqSC+gjZyG0cAEljcbI2o1sCU8gQjA/hR0Q1Hf9zMHOGBKSSwmHKhf1fTP2kCSEKd8MAU+XOeweDPXUT+OaeSPnkLyW3MHhsk8gFDuK9C7Zv3MfWVm5n52h1INo1kUn31Bv07HVoEdQ7qTUZ/6w2MvOs12FQBRwulxaHX03msZ+sPimAR0oBj6ivXsfeX/wQ3OYMUsn0TQX8FUK0z9sn3MPT6VxPqBBpFiDE+Cd6wniC+QAQgZYepfvfb7HnJr+Cmq0j7lIN1IYDA4h6rMPiBX2DoPe8gau6HVJAQX7usgsfGi4WSz73ZwqZHmLvl6+y/9JeRfKYv+UDvBWBiy5/a9TTG/vkqVFx8dHeH/J74XgSxAdRWC5MaYfJtv0H1E1djRgfp6TXxfUmCjUFrdTKvfwlRMIwLDyISePJ7LBCBEpfFI3Vk3/Jy5q76h77kAb0XQOgw5SLmOWfRIgKTTojvye+xyBMYG0cIJ5+IGRtGD0zGobKu1XuC4xNykdEh9MQTaeFAUp78HsvAIaRwkelbPyDoi7JVCdUgpJKIzwvAY8l4OaakBIvygzUtgLjiGxEAqU7C4+GxdEKcAgK0TxzpWye4RcoLwOMIBZDq2yP2UQABYInvQPcC8FhOABYI+iaBPoZAFiWFL396HM4DCJagcx/oOvEAUSeu81Ugj5UEIEgfZzT79kgaxdeKEomf/fFYnv9BwpH1JgBaQJT87fnvsbwDiDmy7gTggEh9DuyxsgDaHFl3AkgrBALivAA8lhGAxtcJpXU9CUAICDkj8x0CU0ZN6F2Ax7IuQAgIM9P8kJCoDzwJekt9JcRQ0jk+VXkbg2rm7wTz8FgiArIiVKYcL9U5KhgCtKcDEUGvX5FaQWYjyi+4h7KJ82AvAI9lBUB8OaLMbkGt6fk4UM9DICNQj+AT9wTkcPgAyGMlAQRADUN9OLktdD0kwVbhKSgF1HsAj8N6gCqK7dPAQG8vyhZoRTCac3zv9Xsp5PAxkMdhFVCtwTOv2sKBmiFle7sa0GMPIBjnqOeyfPB/vJucyeJwnv8ey/LfYKi5OvWrr8ZUG3FZlDW6ERa/oIiay/EHe34dHRyM9zz9KITHkoSJ+wBSqZB3/4BhDu3x+c29zwEEcKAPCToFhH4WyOMwWXBF+jYx0L9O8FyyDhz6IxA9VvAAgcBc/x4y6JuyQ9DQewCPw/AEkJC+nZLZPw/QngT1jQCPlQSgCVdYbwJok98LwOMwHmB9jkOH3gN4HKEHCNebANpurf3HC8BjOZ5IwpF1lwO4rj9eAB7LCaDNkXXlAQTIAFn1IZDHygIIFJr940h/BGBBTxMYFB8CeawgAIm5Uon/XvMCECBSQ87UeeMJHyGXzuO8AjxWcAEGS21gji+aOjU12B6nA0GvX5ATQy6s8bu3vY+hsiOK+jPn7bH24BSshclpw9+EY1TFYHucDfd8IwwDNED+HDQLxvmVSI+lYQA1gtRjztDbQdA+CKBd0kqDfVWElPA5gMfydFHAKnYmgpuAesLQNb0PoBG1VI7fu/g3yQU5HM5/0h4reAFDLaxRS/0lRmvQ4yygD/sAjnqU5X/d86swWPRlUI+VCRMAlVmK0Vcw8XLkGg6B2oFdCOaWEC1ofPKXnwb1WFIAClaQahgbStP7h+xPH8CBTghaa/cBvAA8lvEAVqAmfesG974K1EaT+fsxPDyWQ5RwZSkOrVkPAPOj0F4AHkcQMvfz4Tw8Nix63wdI/payQl7jdp+Hx3IxswFJ6QLurOE+AJ3SlvupFAxIshPsP2qPpbgiEIBOpeDT9GUnoOcCUBUCG/Ks3bcRFMuobwR4rGAthYBwdpr7bUiovb8oL0jy7p50GwQlwpChwZvCz1LSNKGqr4J6LGMsIRBhJmzyOzRo9v549ChQ1bvEmDNRdb1KihWhJnmspInwN8R4LA8rhpr0/KZ4h4hR5+4KkhGknjk0S0SDDB/Xn8cygKqfhvNY3gWIWCKdosG/YKmjPZ2GEw0Evi2wW3v1KKJELcsD1z4TSgU/C+Rx2IIJM3MUWxbpoW1OKPjtANVHe8bI9pZ/aDA3RWhak7OuvQI8liGMCNJoxEdo9nofQPXRACPfSh6jN00xY5HWNDx6AC2V/TCcx2FLJ4QBaE+nQI0CGPlWYCN3V2jMjIiUVt88K0gKaR3AHvgWLnMStByIb0B7LJ0DYEGqB2OjKT0RgYKIOp0JnLsrqFT2PlweGb8HMeeq9iI+UZCA1L4v0xp7pc8BPJaHiyCdIrX3/yHhATQ1lpyovMrxv4gI7p5KZe/DAeCck9tNwLkoq18K1Qi1ZYKJrxHs/UfCsRdBswUm1bfTvzyO/agHF0KQwkw9TPrHH0XtAGhPTsl1CMZFcjvgAgCxcgOq7+xZHoCiJkvuh+9gLthGVDwdWi3i/pt3Bxs+8dUIbAqpT5F78M1IOInaUq8EYFCNOZ+wT8bGdhTq0eSDiGzuqt2sssotuDmww9SO/xRh+YL5w1A9Nrb1N2BqPyD3oyuw1dvRYLgXoQ8dbqvuy9qhpz722L1VIa68huXh8asw9nWqLqRXM0JiwTVAI1pDr6U19Dpcarv3AhvV8gtIuJ/U9N+SPvi/keggasu9Ij9AKGICXPQX0xN7Xk98Hw0WiAojWy+0wnVxHtzLPYG4uCtRBTUFNBjxXmDDCkCQaDYhfgkk3auwpxP/iwiRclH14KM3Ei9gdljpSsPjd4oxZ2k8F9TbdXyxoA605bmwoUMgG18epz0/Ez2SeP7nWzMTe85pcz7oisQA+VOQz/XFJLeVLilPgg3vDPq1AykSc3ye87JQADtSxeHJu0TM05OmmO9YeawHOBBRdffPTgztgnvbYYearuzYwL1NQT4gIj1eRPPw6K+PiZtf8gG4t0nXlFF3+UXiP09NFYer/2bEPF29F/BYB9ZfEHHq7p+dKJwOD7boKsCbhWk5Ag82DLwdwXsBj3Vh/RHEwNvhwQaL1uwXW/cIsNMTe65VdVeLGEtfb2318FhVRCLGqrqrpyf2XEtS8u/+BrOkYkBc4H5J1e1LvscfZ+WxBhNfjKrb5wL3SyxzwIpZ7ger+/btd6qvSxJiLwCPtRf7i4hTfV113779yxlyu2zcBEGrNvtgOlcUEXth0rGy/n31WANoiZiUqvvd2Yk9n2X+9BOOVABtTxA0a7M3pnOF00TsTi8Cj7VD/ugrMwf3/EJC/mU7bYcrcUaAmDB1uTp3p4hJ0dejSz08jgqhiEmpc3eaMHU585d08XgFoIBMTf1o0kTBJYkIAi8Cj2OU/IE6d6eJgkumpn40yRGcLHokTS4HmCVE4KfYPI6lsGcx+Y+oenmkXd5DRWBMyovA45ggv0nCnqMk/+GS4KXCIdNoTNVy6aEvq7iTRMyueKYZf9iPR7/hABUxgap+yUTBZUdL/qMVwAIRNGszX07nCiJinkvcK+jTtWYeHoSIWBERVfe7Mwd//EuNxlSdx9G0fbxWOxmcw5WHxi9RI58TMeOqzh1laOXhcbRWHxFjVN0ecfrG6ck91zA/3XnUs2tPpKavQNCozz5g84NfNERbRcxpSec4eoIC8/BYTHwn81b/r0KCV1QnHv0uKzS5eukBFosoAiiNbr0U1Q+JmJ2K0nUUtPcIHo87zkfECoKquxuR98wcePSri7n3ZApgQUgEO9Kl4cprEd4pYnaCkpw4176Iw3sFj8NFFhFg42giIb7y4ZmJwS8sWmjR1SDuaqJLkbEQVOTNRnh2/EKUpGrkujyDF4QnfLuSaEBMeyHRKbeJ6me6iL8qVr+XAqCL2J0nWR4evxgxr1b0IhHZ2m7QJUewaFfmLj6JXv9JbJflNkCSNnY48agg16Hui8kMf7dxdazyklYvrW9bCJ0nPTIyUmqSuUCRC4DzQE8VkbIselfiTUyPdYfkWPzuz1tVp0HuAW4X9OY0jZsPHjw4sxyHekHSfqAd+y+YIRoc3HJCFNidqDsXlU3AmaABIrvwU6frDRGqd4GEwHcQ3Y+Yb9gwurtS2fvQou8NunKBnuL/A0WUNGIFGz/ZAAAAAElFTkSuQmCC">
+<style>
+/* Layout: one-column instrument — readouts, FFT, spectrogram, peak table; controls in a fixed bottom bar */
+:root{
+  --bg:#eef1f5; --panel:#ffffff; --ink:#16202b; --muted:#5a6676; --line:#d3dae3;
+  --trace:#c4660a; --trace-fill:rgba(196,102,10,.14); --hold:#1f7a96; --bpf:#a3337f;
+  --grid:rgba(22,32,43,.10); --btn:#e3e8ef; --primary:#16202b; --primary-ink:#ffffff;
+  --danger:#b42318; --live-ink:#ffffff; --scrim:rgba(10,15,20,.45);
+  --font-ui:-apple-system,BlinkMacSystemFont,"Pretendard","Apple SD Gothic Neo","Noto Sans KR","Malgun Gothic","Segoe UI",Roboto,sans-serif;
+  --font-num:ui-monospace,"SF Mono","Roboto Mono","Cascadia Mono",Menlo,Consolas,monospace;
+  color-scheme:light;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#0d131a; --panel:#151d27; --ink:#e3e8ee; --muted:#8a97a7; --line:#24303d;
+    --trace:#f0a23b; --trace-fill:rgba(240,162,59,.16); --hold:#5cc0d6; --bpf:#e57ac4;
+    --grid:rgba(227,232,238,.08); --btn:#1f2a36; --primary:#f0a23b; --primary-ink:#1a1206;
+    --danger:#f97066; --live-ink:#1a0b09; --scrim:rgba(0,0,0,.55);
+    color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#0d131a; --panel:#151d27; --ink:#e3e8ee; --muted:#8a97a7; --line:#24303d;
+  --trace:#f0a23b; --trace-fill:rgba(240,162,59,.16); --hold:#5cc0d6; --bpf:#e57ac4;
+  --grid:rgba(227,232,238,.08); --btn:#1f2a36; --primary:#f0a23b; --primary-ink:#1a1206;
+  --danger:#f97066; --live-ink:#1a0b09; --scrim:rgba(0,0,0,.55);
+  color-scheme:dark;
+}
+*{box-sizing:border-box}
+[hidden]{display:none!important}
+html,body{margin:0}
+body{background:var(--bg);color:var(--ink);font:14px/1.45 var(--font-ui);-webkit-text-size-adjust:100%}
+.wrap{max-width:960px;margin:0 auto;padding-inline:16px;
+  padding-block:calc(14px + env(safe-area-inset-top,0px)) calc(92px + env(safe-area-inset-bottom,0px));
+  display:grid;gap:10px}
+header{display:flex;align-items:center;justify-content:space-between;gap:8px}
+h1{font-size:18px;margin:0;letter-spacing:-.01em;text-wrap:balance}
+.chip{font:600 11px/1 var(--font-ui);letter-spacing:.05em;padding:6px 9px;border-radius:999px;background:var(--btn);color:var(--muted);white-space:nowrap}
+.chip.live{background:var(--danger);color:var(--live-ink)}
+.status{color:var(--muted);font-size:12.5px;min-height:1.3em}
+.status.err{color:var(--danger)}
+.readouts{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px}
+@media (max-width:540px){.readouts{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.ro{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:8px 10px;min-width:0}
+.ro .k{font-size:11px;color:var(--muted);letter-spacing:.03em}
+.ro .v{font:600 20px/1.25 var(--font-num);font-variant-numeric:tabular-nums;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.ro .u{font:500 11px var(--font-num);color:var(--muted);margin-left:4px}
+.plot{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:8px 6px 6px;min-width:0}
+.plot-h{display:flex;justify-content:space-between;align-items:baseline;gap:8px;padding:0 6px 6px;font-size:12px;color:var(--muted);flex-wrap:wrap}
+.plot-h b{color:var(--ink);font-weight:650;margin-right:4px}
+.num{font-family:var(--font-num);font-variant-numeric:tabular-nums}
+canvas{display:block;width:100%;touch-action:manipulation}
+#fft{height:250px;touch-action:none;cursor:crosshair;user-select:none;-webkit-user-select:none}
+.plot-h .right{display:flex;align-items:center;gap:8px;min-width:0}
+button.mini{flex:0 0 auto;padding:4px 10px;font-size:12px;border-radius:999px;background:var(--btn);color:var(--ink)}
+.spec-wrap{position:relative}
+.hline{position:absolute;height:0;border-top:1px dashed var(--ink);pointer-events:none;opacity:.85}
+.meter{height:6px;border-radius:3px;background:var(--btn);overflow:hidden;margin-top:6px}
+.meter i{display:block;height:100%;width:0;background:var(--hold);transition:width .08s linear}
+.meter i.hot{background:var(--danger)}
+#spec{height:230px;touch-action:none;user-select:none;-webkit-user-select:none}
+.note.gest{margin:4px 6px 0;font-size:11.5px}
+#toct{height:170px}
+.sq{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px;padding:0 6px 8px}
+@media (min-width:720px){.sq{grid-template-columns:repeat(4,minmax(0,1fr))}}
+.sq .ro{background:var(--bg)}
+.sub{font-size:11.5px;line-height:1.35;color:var(--muted);margin-top:3px;font-variant-numeric:tabular-nums}
+.tag{display:inline-block;font-weight:700;font-size:10.5px;padding:1px 6px;border-radius:999px;background:var(--btn);color:var(--muted);margin-left:4px}
+.tag.on{background:var(--danger);color:var(--live-ink)}
+.warn{color:var(--trace);font-size:12px}
+.sub-h{padding-top:6px}
+.mrow{display:flex;gap:8px;align-items:center;padding:0 6px 8px;flex-wrap:wrap}
+.mrow select,.mrow input[type=text]{font:500 14px var(--font-ui);padding:9px 10px;border-radius:9px;border:1px solid var(--line);background:var(--bg);color:var(--ink)}
+.mrow select{width:auto;max-width:none}
+.mrow input[type=text]{flex:1;min-width:0;width:auto}
+.mrow .go{flex:0 0 auto;padding:10px 16px}
+.mrow .note{flex:1;margin:0;min-width:0}
+.prog{height:5px;border-radius:3px;background:var(--btn);overflow:hidden;margin:0 6px 8px}
+.prog i{display:block;height:100%;width:0;background:var(--trace)}
+#resTable td,#resTable th{white-space:nowrap}
+#resTable td:first-child{color:var(--ink);text-align:left;width:auto;max-width:9em;overflow:hidden;text-overflow:ellipsis}
+#resTable tr.sel td{background:var(--btn)}
+#resTable button{all:unset;cursor:pointer;padding:2px 6px;color:var(--muted);font-weight:700}
+#resTable button:focus-visible{outline:2px solid var(--trace)}
+#resTable .star.on{color:var(--trace)}
+.dpos{color:var(--danger)} .dneg{color:var(--hold)}
+.tbl{overflow-x:auto;padding:0 6px 4px}
+table{width:100%;border-collapse:collapse;font-variant-numeric:tabular-nums}
+th{font-size:11px;font-weight:600;color:var(--muted);text-align:right;padding:4px 6px;letter-spacing:.03em;border-bottom:1px solid var(--line)}
+td{font:500 13.5px var(--font-num);text-align:right;padding:5px 6px;border-bottom:1px solid var(--line)}
+th:first-child,td:first-child{text-align:left;width:2.5em;color:var(--muted)}
+tr:last-child td{border-bottom:0}
+table.nobpf .bpfcol{display:none}
+.bar{position:fixed;left:0;right:0;bottom:0;z-index:5;background:var(--panel);border-top:1px solid var(--line);
+  padding:10px 16px calc(10px + env(safe-area-inset-bottom,0px))}
+.bar .in{display:flex;gap:6px;max-width:960px;margin:0 auto}
+button{font:600 13px var(--font-ui);border:0;border-radius:10px;padding:12px 4px;letter-spacing:-.01em;background:var(--btn);color:var(--ink);
+  flex:1;min-width:0;cursor:pointer;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+button.primary{background:var(--primary);color:var(--primary-ink);flex:1.35}
+.bar #btnHold{flex:1.2}
+button.stop{background:var(--danger);color:var(--live-ink)}
+button[aria-pressed="true"]{box-shadow:inset 0 0 0 2px var(--trace)}
+button:focus-visible,select:focus-visible,input:focus-visible{outline:2px solid var(--trace);outline-offset:2px}
+.sheet-bg{position:fixed;inset:0;background:var(--scrim);z-index:10}
+.sheet{position:fixed;left:0;right:0;bottom:0;z-index:11;max-width:640px;margin:0 auto;max-height:88vh;overflow:auto;
+  background:var(--panel);border-radius:16px 16px 0 0;border:1px solid var(--line);border-bottom:0;
+  padding:14px 16px calc(20px + env(safe-area-inset-bottom,0px))}
+.sheet-head{display:flex;align-items:center;justify-content:space-between;gap:8px;margin-bottom:6px;position:sticky;top:-14px;background:var(--panel);padding-block:8px}
+.sheet-head h2{font-size:16px;margin:0}
+.sheet-head button{flex:0 0 auto;padding:9px 16px}
+fieldset{border:0;padding:0;margin:0 0 18px;min-width:0}
+legend{font-weight:700;font-size:12px;letter-spacing:.06em;color:var(--muted);margin-bottom:2px;padding:0}
+.row{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:9px 0;border-bottom:1px solid var(--line)}
+.row label{flex:1;min-width:0}
+.row small{display:block;color:var(--muted);font-size:11.5px;line-height:1.35;margin-top:1px}
+.ctl{display:flex;align-items:center;gap:8px;flex:0 0 auto}
+select,input[type=number]{font:500 14px var(--font-num);padding:7px 8px;border-radius:8px;border:1px solid var(--line);background:var(--bg);color:var(--ink);width:128px;max-width:44vw}
+input[type=checkbox]{width:22px;height:22px;accent-color:var(--trace);margin:0}
+input[type=range]{width:110px;accent-color:var(--trace)}
+output{font:600 13px var(--font-num);min-width:2ch;text-align:right}
+.note{font-size:12px;color:var(--muted);margin:8px 0 0;line-height:1.45}
+.note.strong{color:var(--ink)}
+.wide{width:100%;padding:13px}
+@media (prefers-reduced-motion: reduce){*{scroll-behavior:auto!important}.meter i{transition:none}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <h1>포켓 스펙트럼</h1>
+    <span id="modeChip" class="chip">데모</span>
+  </header>
+  <div id="status" class="status" role="status" aria-live="polite"></div>
+
+  <section class="readouts" aria-label="측정값">
+    <div class="ro"><div class="k">피크 주파수</div><div class="v"><span id="roPkF">—</span><span class="u">Hz</span></div></div>
+    <div class="ro"><div class="k">피크 레벨</div><div class="v"><span id="roPkL">—</span><span class="u" id="roU1">dBFS</span></div></div>
+    <div class="ro"><div class="k" id="roOvK">OASPL (Z)</div><div class="v"><span id="roOv">—</span><span class="u" id="roU2">dBFS</span></div></div>
+    <div class="ro"><div class="k">입력 레벨 (피크)</div><div class="v"><span id="roIn">—</span><span class="u">dBFS</span></div><div class="meter" aria-hidden="true"><i id="meterBar"></i></div></div>
+  </section>
+
+  <section class="plot" aria-label="평균 측정">
+    <div class="plot-h"><span><b>평균 측정</b></span><span id="measState" class="num"></span></div>
+    <div class="mrow">
+      <select id="measDur" aria-label="측정 시간"><option value="5">5초</option><option value="10">10초</option><option value="30">30초</option><option value="60">60초</option><option value="120">120초</option></select>
+      <input id="measName" type="text" maxlength="20" placeholder="이름 (예: 기존안)" aria-label="결과 이름">
+      <button id="btnMeas" type="button" class="primary go">평균 측정</button>
+    </div>
+    <div class="prog" aria-hidden="true"><i id="measBar"></i></div>
+    <div class="tbl" id="resWrap" hidden>
+      <table id="resTable">
+        <thead><tr><th>이름</th><th>LA</th><th>LZ</th><th>sone</th><th>PR</th><th>ΔLA</th><th></th></tr></thead>
+        <tbody id="resBody"></tbody>
+      </table>
+    </div>
+    <div class="mrow" id="resActions" hidden>
+      <p class="note">행을 누르면 FFT에 점선으로 겹쳐 봅니다. ★는 Δ 기준입니다.</p>
+      <button id="btnCsv" type="button" class="mini">CSV 복사</button>
+      <button id="btnClr" type="button" class="mini">전체 삭제</button>
+    </div>
+  </section>
+
+  <section class="plot">
+    <div class="plot-h"><span><b>FFT</b><span id="fftInfo" class="num"></span></span><span class="right"><span id="cursorInfo" class="num"></span><button id="btnFftFit" class="mini" type="button">자동 맞춤</button><button id="btnZoom" class="mini" type="button" hidden>전체 보기</button></span></div>
+    <canvas id="fft" aria-label="FFT 스펙트럼"></canvas>
+  </section>
+
+  <section class="plot">
+    <div class="plot-h"><span><b>스펙트로그램</b><span id="specInfo" class="num"></span></span><span class="right"><span id="specSpan" class="num"></span><button id="btnSpecFit" class="mini" type="button">자동 맞춤</button><button id="btnSpecFull" class="mini" type="button" hidden>전체 보기</button></span></div>
+    <div class="spec-wrap"><canvas id="spec" aria-label="스펙트로그램"></canvas><div id="specCur" class="hline" hidden></div></div>
+    <p class="note gest">두 손가락: 주파수 확대·이동 · 범례 끌기: 범위 이동 · 범례 핀치: 범위 폭 · 탭: 커서 · 두 번 탭: 원위치</p>
+  </section>
+
+  <section class="plot" aria-label="음질 지표">
+    <div class="plot-h"><span><b>음질 지표</b></span><span id="sqWarn" class="warn"></span></div>
+    <div class="sq">
+      <div class="ro"><div class="k">라우드니스 · ISO 532-1</div><div class="v"><span id="sqN">—</span><span class="u">sone</span></div><div class="sub" id="sqNsub">—</div></div>
+      <div class="ro"><div class="k">샤프니스 · DIN 45692</div><div class="v"><span id="sqS">—</span><span class="u">acum</span></div><div class="sub" id="sqSsub">—</div></div>
+      <div class="ro"><div class="k">톤 두드러짐 PR · ECMA-74</div><div class="v"><span id="sqPR">—</span><span class="u">dB</span></div><div class="sub" id="sqPRsub">—</div><div class="sub" id="sqBPF" hidden></div></div>
+      <div class="ro"><div class="k">음압 레벨</div><div class="v"><span id="sqLA">—</span><span class="u" id="sqLAu">dBA</span></div><div class="sub" id="sqLZ">—</div></div>
+    </div>
+    <div class="plot-h sub-h"><span><b>1/3 옥타브</b><span id="toInfo" class="num"></span></span><span id="toPeak" class="num"></span></div>
+    <canvas id="toct" aria-label="1/3 옥타브 밴드 레벨"></canvas>
+  </section>
+
+  <section class="plot">
+    <div class="plot-h"><span><b>상위 피크</b></span><span id="pkNote"></span></div>
+    <div class="tbl">
+      <table id="pkTable" class="nobpf">
+        <thead><tr><th>#</th><th>주파수 (Hz)</th><th>레벨</th><th class="bpfcol">BPF 배수</th></tr></thead>
+        <tbody id="pkBody"></tbody>
+      </table>
+    </div>
+  </section>
+</div>
+
+<nav class="bar" aria-label="조작">
+  <div class="in">
+    <button id="btnMic" class="primary" type="button">측정 시작</button>
+    <button id="btnPause" type="button" aria-pressed="false">멈춤</button>
+    <button id="btnHold" type="button" aria-label="피크 홀드 지우기">홀드 리셋</button>
+    <button id="btnFile" type="button">파일</button>
+    <button id="btnSet" type="button">설정</button>
+  </div>
+</nav>
+<input type="file" id="fileIn" accept="audio/*,.wav,.mp3,.m4a,.aac,.ogg,.flac" hidden>
+
+<div id="sheetBg" class="sheet-bg" hidden></div>
+<div id="sheet" class="sheet" hidden role="dialog" aria-modal="true" aria-labelledby="setTitle">
+  <form id="setForm" onsubmit="return false">
+    <div class="sheet-head"><h2 id="setTitle">설정</h2><button type="button" id="btnClose">닫기</button></div>
+
+    <fieldset>
+      <legend>마이크 입력</legend>
+      <div class="row"><label for="s-agc">자동 이득 (AGC)<small>켜면 레벨이 계속 바뀌어 비교 측정이 어렵습니다</small></label><div class="ctl"><input type="checkbox" id="s-agc" data-k="agc"></div></div>
+      <div class="row"><label for="s-ns">노이즈 억제<small>켜면 팬 광대역 소음이 지워집니다</small></label><div class="ctl"><input type="checkbox" id="s-ns" data-k="ns"></div></div>
+      <div class="row"><label for="s-ec">에코 제거<small>통화용 처리입니다. 측정에는 꺼 두세요</small></label><div class="ctl"><input type="checkbox" id="s-ec" data-k="ec"></div></div>
+      <p class="note" id="trackInfo">측정을 시작하면 실제로 적용된 입력 설정이 여기에 표시됩니다. 바꾸면 측정이 다시 시작됩니다.</p>
+    </fieldset>
+
+    <fieldset>
+      <legend>분석</legend>
+      <div class="row"><label for="s-fftSize">FFT 크기<small id="fftHint"></small></label><div class="ctl">
+        <select id="s-fftSize" data-k="fftSize">
+          <option value="2048">2,048</option><option value="4096">4,096</option><option value="8192">8,192</option>
+          <option value="16384">16,384</option><option value="32768">32,768</option>
+        </select></div></div>
+      <div class="row"><label for="s-win">윈도우<small id="winHint"></small></label><div class="ctl">
+        <select id="s-win" data-k="win">
+          <option value="hann">Hann</option><option value="hamming">Hamming</option><option value="bh">Blackman-Harris</option>
+          <option value="flattop">Flat-top</option><option value="rect">사각 (없음)</option>
+        </select></div></div>
+      <div class="row"><label for="s-scale">스펙트럼 크기<small>RMS는 LMS의 amplitude correction RMS 스펙트럼과 같습니다</small></label><div class="ctl">
+        <select id="s-scale" data-k="scale"><option value="rms">RMS</option><option value="peak">피크</option></select></div></div>
+      <div class="row"><label for="s-avg">평균 횟수<small>지수 평균. FFT 곡선에 적용, 스펙트로그램은 순간값</small></label><div class="ctl">
+        <input type="range" id="s-avg" data-k="avg" min="1" max="32" step="1"><output id="avgOut" for="s-avg"></output></div></div>
+      <div class="row"><label for="s-weight">주파수 가중</label><div class="ctl">
+        <select id="s-weight" data-k="weight"><option value="Z">Z (없음)</option><option value="A">A 가중</option></select></div></div>
+      <div class="row"><label for="s-fps">화면 갱신<small>느린 폰은 낮추세요</small></label><div class="ctl">
+        <select id="s-fps" data-k="fps"><option value="10">10 fps</option><option value="15">15 fps</option><option value="30">30 fps</option><option value="60">60 fps</option></select></div></div>
+      <p class="note num" id="oaNote"></p>
+    </fieldset>
+
+    <fieldset>
+      <legend>음질 지표</legend>
+      <div class="row"><label for="s-field">음장<small>라우드니스 계산 조건 (ISO 532-1)</small></label><div class="ctl">
+        <select id="s-field" data-k="field"><option value="free">자유음장</option><option value="diffuse">확산음장</option></select></div></div>
+      <p class="note">라우드니스와 샤프니스는 dB SPL 기준입니다. 보정 오프셋을 먼저 맞춰야 값이 의미가 있습니다. 계산에는 평균된 스펙트럼을 쓰고, 0.5초마다 갱신합니다.</p>
+    </fieldset>
+
+    <fieldset>
+      <legend>표시</legend>
+      <div class="row"><label for="s-axis">주파수 축</label><div class="ctl">
+        <select id="s-axis" data-k="axis"><option value="log">로그</option><option value="lin">선형</option></select></div></div>
+      <div class="row"><label for="s-fMin">시작 주파수 (Hz)</label><div class="ctl"><input type="number" id="s-fMin" data-k="fMin" min="0" step="1" inputmode="decimal"></div></div>
+      <div class="row"><label for="s-fMax">끝 주파수 (Hz)<small>샘플링 주파수의 절반에서 잘립니다</small></label><div class="ctl"><input type="number" id="s-fMax" data-k="fMax" min="10" step="1" inputmode="decimal"></div></div>
+      <div class="row"><label for="s-dbMin">FFT dB 하한<small>자동 맞춤 결과도 여기에 저장됩니다</small></label><div class="ctl"><input type="number" id="s-dbMin" data-k="dbMin" step="5" inputmode="decimal"></div></div>
+      <div class="row"><label for="s-dbMax">FFT dB 상한</label><div class="ctl"><input type="number" id="s-dbMax" data-k="dbMax" step="5" inputmode="decimal"></div></div>
+      <div class="row"><label for="s-cal">보정 오프셋 (dB)<small id="calState">dBFS에 더하는 값</small></label><div class="ctl"><input type="number" id="s-cal" data-k="cal" step="0.1" inputmode="decimal"></div></div>
+      <div class="row"><label for="calRef">기준 레벨로 보정<small>기본 40 dB는 조용한 사무실 기준입니다. LMS 등으로 같은 위치에서 잰 값이 있으면 그 값을 넣으세요. 측정 중에 누르면 지금 가중·주파수 범위의 OASPL을 이 값에 맞춥니다</small></label><div class="ctl"><input type="number" id="calRef" data-k="calRef" step="0.1" inputmode="decimal"><button type="button" id="btnCal" class="mini">보정</button></div></div>
+      <div class="row"><label for="s-fftAuto">FFT 세로축 시작 때 자동 맞춤<small>측정을 시작하고 약 1초 뒤 한 번 맞춘 뒤 고정합니다. 이후 dB 하한·상한, 핀치, "자동 맞춤" 버튼으로 바꿀 수 있습니다</small></label><div class="ctl"><input type="checkbox" id="s-fftAuto" data-k="fftAuto"></div></div>
+      <div class="row"><label for="s-specAuto">스펙트로그램 범례 시작 때 자동 맞춤<small>측정을 시작하고 약 2초 뒤 한 번 맞춘 뒤 고정합니다</small></label><div class="ctl"><input type="checkbox" id="s-specAuto" data-k="specAuto"></div></div>
+      <div class="row"><label for="s-specMin">범례 하한 (dB)</label><div class="ctl"><input type="number" id="s-specMin" data-k="specMin" step="5" inputmode="decimal"></div></div>
+      <div class="row"><label for="s-specMax">범례 상한 (dB)</label><div class="ctl"><input type="number" id="s-specMax" data-k="specMax" step="5" inputmode="decimal"></div></div>
+      <div class="row"><label for="s-hold">피크 홀드 곡선</label><div class="ctl"><input type="checkbox" id="s-hold" data-k="hold"></div></div>
+      <div class="row"><label for="s-cmap">색상맵</label><div class="ctl">
+        <select id="s-cmap" data-k="cmap"><option value="rainbow">레인보우</option><option value="inferno">Inferno</option><option value="viridis">Viridis</option><option value="gray">회색조</option></select></div></div>
+      <div class="row"><label for="s-speed">스펙트로그램 속도<small>프레임당 이동 픽셀</small></label><div class="ctl">
+        <select id="s-speed" data-k="speed"><option value="1">1 (느림)</option><option value="2">2</option><option value="3">3</option><option value="4">4 (빠름)</option></select></div></div>
+    </fieldset>
+
+    <fieldset>
+      <legend>팬 BPF 표시</legend>
+      <div class="row"><label for="s-bpfOn">BPF 고조파 표시<small>FFT와 스펙트로그램에 점선으로 표시</small></label><div class="ctl"><input type="checkbox" id="s-bpfOn" data-k="bpfOn"></div></div>
+      <div class="row"><label for="s-blades">날개 수</label><div class="ctl"><input type="number" id="s-blades" data-k="blades" min="1" max="200" step="1" inputmode="numeric"></div></div>
+      <div class="row"><label for="s-rpm">회전수 (rpm)</label><div class="ctl"><input type="number" id="s-rpm" data-k="rpm" min="1" step="1" inputmode="decimal"></div></div>
+      <div class="row"><label for="s-harm">고조파 개수</label><div class="ctl"><input type="number" id="s-harm" data-k="harm" min="1" max="10" step="1" inputmode="numeric"></div></div>
+      <p class="note strong num" id="bpfVal"></p>
+      <p class="note">데모 신호도 이 날개 수와 회전수로 만들어집니다.</p>
+    </fieldset>
+
+    <button type="button" id="btnReset" class="wide">기본값으로 되돌리기</button>
+    <p class="note">바탕화면 바로가기: 크롬 오른쪽 위 ⋮ 메뉴 → 홈 화면에 추가.</p>
+    <p class="note">소리는 이 폰 안에서만 처리됩니다. 녹음 파일을 저장하지 않고, 외부 서버로 아무것도 보내지 않습니다.</p>
+  </form>
+</div>
+
+<script>
+/* ---------- sound quality core: 1/3 octave, ISO 532-1 loudness, DIN 45692 sharpness, ECMA-74 prominence ratio ---------- */
+const SQ = (() => {
+  const TO_NOM = [25,31.5,40,50,63,80,100,125,160,200,250,315,400,500,630,800,1000,1250,1600,2000,2500,3150,4000,5000,6300,8000,10000,12500,16000,20000];
+
+  /* 1/3-octave bands as 3rd-order Butterworth band-pass magnitude responses (IEC 61260 base-10 centres),
+     evaluated on the FFT lines. Same filter definition as ANSI S1.11 / MoSQITo noct_synthesis. */
+  function thirdOctBands(fs, N){
+    const df = fs/N, M = N/2 + 1, n = 3, b = 1/3, out = [];
+    for (let i = 0; i < TO_NOM.length; i++){
+      const fc = 1000*Math.pow(10, (i - 16)/10);
+      const f1 = fc/Math.pow(2, b/2), f2 = fc*Math.pow(2, b/2);
+      if (f2 > fs/2) continue;
+      const qr = fc/(f2 - f1), qd = (Math.PI/2/n)/Math.sin(Math.PI/2/n)*qr;
+      const alpha = (1 + Math.sqrt(1 + 4*qd*qd))/2/qd;
+      const O1 = Math.tan(Math.PI*(fc/alpha)/fs), O2 = Math.tan(Math.PI*(fc*alpha)/fs), B = O2 - O1, O0 = O1*O2;
+      let ka = -1, kb = -1; const tmp = [];
+      for (let k = 1; k < M - 1; k++){
+        const O = Math.tan(Math.PI*k*df/fs), x = (O*O - O0)/(O*B), h2 = 1/(1 + Math.pow(x, 2*n));
+        if (h2 > 1e-7){ if (ka < 0) ka = k; kb = k; tmp.push(h2); }
+        else if (ka >= 0) break;
+      }
+      out.push({nom:TO_NOM[i], fc, ka, w:Float64Array.from(tmp)});
+    }
+    return out;
+  }
+  // E: energy-corrected mean-square per FFT line (any reference); returns band levels in dB (same reference)
+  function thirdOctLevels(bands, E){
+    return bands.map(bd => {
+      let s = 0; const w = bd.w;
+      for (let i = 0; i < w.length; i++) s += w[i]*E[bd.ka + i];
+      return 10*Math.log10(s + 1e-30);
+    });
+  }
+
+  /* ISO 532-1:2017 method for stationary sounds (Zwicker), from 28 third-octave levels 25 Hz–12.5 kHz in dB SPL */
+  const RAP = [45, 55, 65, 71, 80, 90, 100, 120];
+  const DLL = [
+    [-32,-24,-16,-10,-5,0,-7,-3,0,-2,0],[-29,-22,-15,-10,-4,0,-7,-2,0,-2,0],[-27,-19,-14,-9,-4,0,-6,-2,0,-2,0],
+    [-25,-17,-12,-9,-3,0,-5,-2,0,-2,0],[-23,-16,-11,-7,-3,0,-4,-1,0,-1,0],[-20,-14,-10,-6,-3,0,-4,-1,0,-1,0],
+    [-18,-12,-9,-6,-2,0,-3,-1,0,-1,0],[-15,-10,-8,-4,-2,0,-3,-1,0,-1,0]];
+  const LTQ = [30,18,12,8,7,6,5,4,3,3,3,3,3,3,3,3,3,3,3,3];
+  const A0  = [0,0,0,0,0,0,0,0,0,0,-0.5,-1.6,-3.2,-5.4,-5.6,-4,-1.5,2,5,12];
+  const DDF = [0,0,0.5,0.9,1.2,1.6,2.3,2.8,3,2,0,-1.4,-2,-1.9,-1,0.5,3,4,4.3,4];
+  const DCB = [-0.25,-0.6,-0.8,-0.8,-0.5,0,0.5,1.1,1.5,1.7,1.8,1.8,1.7,1.6,1.4,1.2,0.8,0.5,0,-0.5];
+  const ZUP = [0.9,1.8,2.8,3.5,4.4,5.4,6.6,7.9,9.2,10.6,12.3,13.8,15.2,16.7,18.1,19.3,20.6,21.8,22.7,23.6,24];
+  const RNS = [21.5,18,15.1,11.5,9,6.1,4.4,3.1,2.13,1.36,0.82,0.42,0.30,0.22,0.15,0.10,0.035,0];
+  const USL = [
+    [13,8.2,6.3,5.5,5.5,5.5,5.5,5.5],[9,7.5,6,5.1,4.5,4.5,4.5,4.5],[7.8,6.7,5.6,4.9,4.4,3.9,3.9,3.9],
+    [6.2,5.4,4.6,4.0,3.5,3.2,3.2,3.2],[4.5,3.8,3.6,3.2,2.9,2.7,2.7,2.7],[3.7,3.0,2.8,2.35,2.2,2.2,2.2,2.2],
+    [2.9,2.3,2.1,1.9,1.8,1.7,1.7,1.7],[2.4,1.7,1.5,1.35,1.3,1.3,1.3,1.3],[1.95,1.45,1.3,1.15,1.1,1.1,1.1,1.1],
+    [1.5,1.2,0.94,0.86,0.82,0.82,0.82,0.82],[0.72,0.67,0.64,0.63,0.62,0.62,0.62,0.62],[0.59,0.53,0.51,0.50,0.42,0.42,0.42,0.42],
+    [0.40,0.33,0.26,0.24,0.24,0.22,0.22,0.22],[0.27,0.21,0.20,0.18,0.17,0.17,0.17,0.17],[0.16,0.15,0.14,0.12,0.11,0.11,0.11,0.11],
+    [0.12,0.11,0.10,0.08,0.08,0.08,0.08,0.08],[0.09,0.08,0.07,0.06,0.06,0.06,0.06,0.05],[0.06,0.05,0.03,0.02,0.02,0.02,0.02,0.02]];
+
+  function coreLoudness(LT, diffuse){
+    const TI = new Array(11);
+    for (let i = 0; i < 11; i++){
+      let j = 0;
+      while (j < 7 && LT[i] > RAP[j] - DLL[j][i]) j++;
+      TI[i] = Math.pow(10, (LT[i] + DLL[j][i])/10);
+    }
+    const GI = [TI.slice(0,6), TI.slice(6,9), TI.slice(9,11)].map(a => a.reduce((s, v) => s + v, 0));
+    const LCB = GI.map(g => g > 0 ? 10*Math.log10(g) : 0);
+    const NM = new Array(21).fill(0);
+    for (let i = 0; i < 20; i++){
+      let le = i < 3 ? LCB[i] : LT[i + 8];
+      le -= A0[i];
+      if (diffuse) le += DDF[i];
+      if (le > LTQ[i]){
+        le -= DCB[i];
+        const mp1 = 0.0635*Math.pow(10, 0.025*LTQ[i]);
+        const mp2 = Math.pow(1 - 0.25 + 0.25*Math.pow(10, 0.1*(le - LTQ[i])), 0.25) - 1;
+        NM[i] = Math.max(0, mp1*mp2);
+      }
+    }
+    const korry = 0.4 + 0.32*Math.pow(NM[0], 0.2);
+    if (korry <= 1) NM[0] *= korry;
+    return NM;
+  }
+  function slopes(NM){
+    const NS = new Float64Array(240);
+    let N = 0, Z1 = 0, N1 = 0, Z = 0.1, j = 0, iz = 0;
+    for (let i = 0; i < 21; i++){
+      const zup = ZUP[i] + 0.0001, ig = Math.max(0, Math.min(7, i - 1));
+      let guard = 0;
+      do {
+        let N2, Z2;
+        if (N1 > NM[i]){
+          N2 = Math.max(RNS[j], NM[i]);
+          let DZ = (N1 - N2)/USL[j][ig];
+          Z2 = Z1 + DZ;
+          if (Z2 > zup){ Z2 = zup; DZ = Z2 - Z1; N2 = N1 - DZ*USL[j][ig]; }
+          N += DZ*(N1 + N2)/2;
+          for (; Z < Z2 && iz < 240; Z += 0.1) NS[iz++] = N1 - (Z - Z1)*USL[j][ig];
+        } else {
+          if (N1 < NM[i]){ j = 0; while (j < 17 && RNS[j] >= NM[i]) j++; }
+          Z2 = zup; N2 = NM[i];
+          N += N2*(Z2 - Z1);
+          for (; Z < Z2 && iz < 240; Z += 0.1) NS[iz++] = N2;
+        }
+        if (N2 <= RNS[j] && j < 17) j++;
+        Z1 = Z2; N1 = N2;
+      } while (Z1 < zup - 1e-9 && ++guard < 200);
+    }
+    if (N < 0) N = 0;
+    N = N <= 16 ? Math.floor(N*1000 + 0.5)/1000 : Math.floor(N*100 + 0.5)/100;
+    return {N, NS};
+  }
+  function loudness(LT28, diffuse){
+    const r = slopes(coreLoudness(LT28, diffuse));
+    r.LN = r.N >= 1 ? 40 + 10*Math.log2(r.N) : 40*Math.pow(r.N + 0.0005, 0.35);
+    r.over = Math.max(...LT28) > 120;
+    return r;
+  }
+  function sharpnessDin(N, NS){
+    if (N < 0.1) return 0;
+    let s = 0;
+    for (let i = 0; i < 240; i++){
+      const z = (i + 1)*0.1, g = z > 15.8 ? 0.15*Math.exp(0.42*(z - 15.8)) + 0.85 : 1;
+      s += NS[i]*g*z*0.1;
+    }
+    return 0.11*s/N;
+  }
+
+  /* ECMA-74 Annex D prominence ratio for a tone at ft, from energy-corrected line powers E */
+  function critBand(f0){
+    const d = 25 + 75*Math.pow(1 + 1.4*Math.pow(f0/1000, 2), 0.69);
+    if (f0 < 500) return [f0 - d/2, f0 + d/2];
+    const f1 = -d/2 + Math.sqrt(d*d + 4*f0*f0)/2;
+    return [f1, f1 + d];
+  }
+  function lowerBand(f0){
+    const f2 = critBand(f0)[0];
+    const c = f0 < 171.4 ? [20, 0, 0] : f0 <= 1600 ? [-149.5, 1.001, -6.9e-5] : [6.8, 0.806, -8.2e-6];
+    return [c[0] + c[1]*f0 + c[2]*f0*f0, f2];
+  }
+  function upperBand(f0){
+    const f1 = critBand(f0)[1];
+    const c = f0 <= 1600 ? [149.5, 1.035, 7.7e-5] : [3.3, 1.215, 2.16e-5];
+    return [f1, c[0] + c[1]*f0 + c[2]*f0*f0];
+  }
+  function prominence(E, df, ft){
+    if (!(ft > 89.1 && ft < 11200)) return null;
+    // tone must lie in 89.1 Hz–11.2 kHz; the bands around it use all lines (the lower band reaches down to 20 Hz)
+    const kmin = 1, kmax = E.length - 1;
+    const sum = ([fa, fb]) => {
+      const a = Math.max(kmin, Math.min(kmax, Math.round(fa/df))), b = Math.max(kmin, Math.min(kmax, Math.round(fb/df)));
+      let s = 0; for (let k = a; k < b; k++) s += E[k]; return s;
+    };
+    const lb = lowerBand(ft), Wm = sum(critBand(ft)), Wl = sum(lb), Wu = sum(upperBand(ft));
+    const dfl = lb[1] - lb[0];
+    const den = ft <= 171.4 ? ((100/dfl)*Wl + Wu)*0.5 : (Wl + Wu)*0.5;
+    const pr = 10*Math.log10(Wm + 1e-30) - 10*Math.log10(den + 1e-30);
+    const crit = ft <= 1000 ? 9 + 10*Math.log10(1000/ft) : 9;
+    return {f:ft, pr, crit, prominent: pr >= crit};
+  }
+
+  return {TO_NOM, thirdOctBands, thirdOctLevels, loudness, sharpnessDin, prominence};
+})();
+</script>
+<script>
+(() => {
+'use strict';
+
+/* ---------- settings ---------- */
+const KEY = 'pocketSpectrum.v1';
+const DEF = {
+  agc:false, ns:false, ec:false,
+  fftSize:32768, win:'hann', avg:4, weight:'Z', scale:'rms', fps:30, field:'free',
+  axis:'log', fMin:20, fMax:20000, dbMin:-40, dbMax:80, cal:80, calSrc:'est', calRef:40, hold:true, cmap:'rainbow', speed:2, specAuto:true, fftAuto:true, specMin:-20, specMax:60, measDur:10,
+  bpfOn:false, blades:35, rpm:900, harm:4
+};
+let S = Object.assign({}, DEF);
+try {
+  const j = JSON.parse(localStorage.getItem(KEY) || 'null');
+  if (j && typeof j === 'object'){
+    for (const k in DEF) if (k in j && typeof j[k] === typeof DEF[k]) S[k] = j[k];
+    if (!(j.v >= 2)) S.cmap = 'rainbow';
+    if (!(j.v >= 3)){
+      if (S.cal === 0){
+        S.cal = DEF.cal; S.calSrc = 'est';
+        if (S.dbMin === -120 && S.dbMax === 0){ S.dbMin = DEF.dbMin; S.dbMax = DEF.dbMax; }
+      }
+      else if (!('calSrc' in j)) S.calSrc = 'manual';
+    }
+  }
+} catch (e) {}
+function save(){ try { localStorage.setItem(KEY, JSON.stringify(Object.assign({v:3}, S))); } catch (e) {} }
+
+const $ = id => document.getElementById(id);
+let lastErrMsg = '', errCount = 0;
+function showError(msg){
+  errCount++;
+  if (msg === lastErrMsg) return;           // the loop can repeat the same error every frame
+  lastErrMsg = msg;
+  try { const el = $('status'); el.textContent = `오류가 났습니다: ${msg}. 이 문구를 알려주시면 고치겠습니다.`; el.classList.add('err'); } catch (_) {}
+}
+window.addEventListener('error', e => showError(`${e.message || e.type}${e.lineno ? ' (줄 ' + e.lineno + ')' : ''}`));
+window.addEventListener('unhandledrejection', e => showError(String((e.reason && (e.reason.message || e.reason.name)) || e.reason)));
+const clamp = (v, a, b) => Math.min(b, Math.max(a, v));
+const WIN_NAME = {hann:'Hann', hamming:'Hamming', bh:'Blackman-Harris', flattop:'Flat-top', rect:'사각'};
+const WIN_LOBE = {hann:3, hamming:3, bh:5, flattop:6, rect:2};
+
+/* ---------- state ---------- */
+const TBUF_N = 32768;
+const tbuf = new Float32Array(TBUF_N);
+let mode = 'demo';           // demo | mic | file | idle
+let frozen = false;
+let fs = 48000;
+let actx = null, analyser = null, sink = null, stream = null, srcNode = null, fileNode = null, fileName = '';
+let wakeLock = null;
+
+/* ---------- FFT core ---------- */
+let N = 0, rev, cT, sT, re, im, win, sumW = 1, sumW2 = 1;
+let pDb, avgP, avgDb, holdDb, wLin, avgCount = 0;
+
+function prepN(n){
+  N = n;
+  const bits = Math.round(Math.log2(n));
+  rev = new Uint32Array(n);
+  for (let i = 0; i < n; i++){ let x = i, r = 0; for (let b = 0; b < bits; b++){ r = (r << 1) | (x & 1); x >>= 1; } rev[i] = r; }
+  cT = new Float64Array(n/2); sT = new Float64Array(n/2);
+  for (let i = 0; i < n/2; i++){ cT[i] = Math.cos(2*Math.PI*i/n); sT[i] = -Math.sin(2*Math.PI*i/n); }
+  re = new Float64Array(n); im = new Float64Array(n);
+  const M = n/2 + 1;
+  pDb = new Float32Array(M).fill(-200);
+  avgP = new Float64Array(M);
+  avgDb = new Float32Array(M).fill(-200);
+  holdDb = new Float32Array(M).fill(-200);
+  avgCount = 0;
+}
+function fft(){
+  for (let i = 0; i < N; i++){ const j = rev[i]; if (j > i){ let t = re[i]; re[i] = re[j]; re[j] = t; t = im[i]; im[i] = im[j]; im[j] = t; } }
+  for (let size = 2; size <= N; size <<= 1){
+    const half = size >> 1, step = N / size;
+    for (let i = 0; i < N; i += size){
+      for (let j = 0, k = 0; j < half; j++, k += step){
+        const a = i + j, l = a + half;
+        const tr = re[l]*cT[k] - im[l]*sT[k];
+        const ti = re[l]*sT[k] + im[l]*cT[k];
+        re[l] = re[a] - tr; im[l] = im[a] - ti;
+        re[a] += tr; im[a] += ti;
+      }
+    }
+  }
+}
+function prepWin(){
+  win = new Float64Array(N); sumW = 0; sumW2 = 0;
+  for (let n = 0; n < N; n++){
+    const x = 2*Math.PI*n/N; let w;
+    switch (S.win){
+      case 'hann': w = 0.5 - 0.5*Math.cos(x); break;
+      case 'hamming': w = 0.54 - 0.46*Math.cos(x); break;
+      case 'bh': w = 0.35875 - 0.48829*Math.cos(x) + 0.14128*Math.cos(2*x) - 0.01168*Math.cos(3*x); break;
+      case 'flattop': w = 0.21557895 - 0.41663158*Math.cos(x) + 0.277263158*Math.cos(2*x) - 0.083578947*Math.cos(3*x) + 0.006947368*Math.cos(4*x); break;
+      default: w = 1;
+    }
+    win[n] = w; sumW += w; sumW2 += w*w;
+  }
+}
+function aWeightDb(f){
+  if (f <= 0) return -200;
+  const f2 = f*f;
+  const ra = (12194**2 * f2*f2) / ((f2 + 20.6**2) * Math.sqrt((f2 + 107.7**2)*(f2 + 737.9**2)) * (f2 + 12194**2));
+  return 20*Math.log10(ra) + 2.0;
+}
+function prepWeights(){
+  const M = N/2 + 1; wLin = new Float64Array(M);
+  for (let k = 0; k < M; k++){
+    const d = S.weight === 'A' ? aWeightDb(k*fs/N) : 0;
+    wLin[k] = Math.pow(10, Math.max(d, -200)/10);
+  }
+  toBands = SQ.thirdOctBands(fs, N);
+  Ebuf = new Float64Array(M); aLinK = new Float64Array(M);
+  for (let k = 0; k < M; k++) aLinK[k] = Math.pow(10, Math.max(aWeightDb(k*fs/N), -200)/10);
+}
+let toBands = null, Ebuf = null, aLinK = null;
+function resetAvg(){ avgP.fill(0); avgCount = 0; holdDb.fill(-200); }
+
+function processFrame(){
+  const off = TBUF_N - N;
+  for (let i = 0; i < N; i++){ re[i] = tbuf[off + i]*win[i]; im[i] = 0; }
+  fft();
+  // amplitude-corrected line spectrum: RMS → (√2·|X|/ΣW)², peak → (2·|X|/ΣW)²
+  const M = N/2 + 1, sc = (S.scale === 'rms' ? 2 : 4)/(sumW*sumW), cal = S.cal;
+  const a = Math.max(1/S.avg, 1/(avgCount + 1)); avgCount++;
+  for (let k = 0; k < M; k++){
+    const x2 = re[k]*re[k] + im[k]*im[k];
+    const p = x2*sc*wLin[k];
+    avgP[k] += a*(p - avgP[k]);
+    if (meas) meas.sum[k] += p;
+    pDb[k] = 10*Math.log10(p + 1e-30) + cal;
+    const d = 10*Math.log10(avgP[k] + 1e-30) + cal;
+    avgDb[k] = d;
+    if (d > holdDb[k]) holdDb[k] = d;
+  }
+  if (meas) meas.frames++;
+}
+/* OASPL, LMS style: Σ ( 10^(Lk/20) / ACF × ECF )² over the band, Lk = amplitude-corrected RMS line level.
+   ACF = N/ΣW (Hann 2.000), ECF = √(N/ΣW²) (Hann 1.633). Always RMS-based, whatever the display scale. */
+function computeOaspl(){
+  if (!avgCount) return null;
+  const df = fs/N, ACF = N/sumW, ECF = Math.sqrt(N/sumW2);
+  const k0 = Math.max(1, Math.ceil(FR[0]/df)), k1 = Math.min(N/2 - 1, Math.floor(FR[1]/df));
+  const toRms = S.scale === 'rms' ? 1 : 0.5, calLin = Math.pow(10, S.cal/10);
+  let sum = 0;
+  for (let k = k0; k <= k1; k++){
+    const lin = Math.sqrt(avgP[k]*toRms*calLin);   // = 10^(Lk/20)
+    const e = lin/ACF*ECF;
+    sum += e*e;
+  }
+  return 10*Math.log10(sum + 1e-30);
+}
+
+/* ---------- demo signal (sirocco fan-like) ---------- */
+let demoT = 0, lpS = 0;
+function genDemo(){
+  demoT += 1/Math.max(1, S.fps);
+  const n = N, off = TBUF_N - n, f0 = fs;
+  const rpm = S.rpm*(1 + 0.004*Math.sin(demoT*0.6));
+  const bpf = S.blades*rpm/60, fr = rpm/60, t0 = demoT - n/f0, w = 2*Math.PI;
+  for (let i = 0; i < n; i++){
+    const t = t0 + i/f0;
+    let s = 0.06*Math.sin(w*bpf*t) + 0.025*Math.sin(w*2*bpf*t + 1) + 0.012*Math.sin(w*3*bpf*t + 2)
+          + 0.006*Math.sin(w*4*bpf*t + 3) + 0.01*Math.sin(w*fr*t) + 0.004*Math.sin(w*120*t);
+    const r = Math.random()*2 - 1;
+    lpS = 0.985*lpS + 0.015*r;
+    tbuf[off + i] = s + 0.35*lpS + 0.003*r;
+  }
+}
+
+/* ---------- canvases & geometry ---------- */
+const fcv = $('fft'), scv = $('spec');
+const tcv = $('toct');
+const fctx = fcv.getContext('2d'), sctx = scv.getContext('2d'), tctx = tcv.getContext('2d');
+let tG = null;
+let dpr = 1, fG = null, sG = null, FR = [20, 20000];
+let colK0, colK1, rowK0, rowK1, colImg = null, traceY = null;
+let C = {};
+
+function readColors(){
+  const cs = getComputedStyle(document.documentElement);
+  const g = n => cs.getPropertyValue(n).trim();
+  C = {grid:g('--grid'), muted:g('--muted'), ink:g('--ink'), trace:g('--trace'), fill:g('--trace-fill'),
+       hold:g('--hold'), bpf:g('--bpf'), panel:g('--panel'), num:g('--font-num') || 'monospace'};
+}
+function fRange(){
+  const ny = fs/2;
+  let lo = S.axis === 'log' ? Math.max(1, S.fMin) : Math.max(0, S.fMin);
+  lo = Math.min(lo, ny*0.9);
+  let hi = Math.min(S.fMax, ny);
+  if (hi <= lo*1.01 + 1) hi = ny;
+  return [lo, hi];
+}
+function frac2f(u){ const [lo, hi] = FR; return S.axis === 'log' ? lo*Math.pow(hi/lo, u) : lo + (hi - lo)*u; }
+function f2frac(f){ const [lo, hi] = FR; return S.axis === 'log' ? Math.log(Math.max(f, 1e-9)/lo)/Math.log(hi/lo) : (f - lo)/(hi - lo); }
+
+/* FFT view for zoom/pan: VU = visible part of the frequency axis (0..1 of FR), VD = visible dB range */
+let VU = [0, 1], VD = [S.dbMin, S.dbMax];
+function viewReset(which){
+  if (which !== 'd') VU = [0, 1];
+  if (which !== 'u') VD = [S.dbMin, S.dbMax];
+}
+const autoScratch = [];
+// FFT y range from what is visible: top above the highest trace, bottom below the 5th-percentile floor
+function fftAutoRange(){
+  if (!avgCount || !fG || !colK0) return null;
+  autoScratch.length = 0; let mx = -1e9;
+  for (let x = 0; x < fG.w; x += 2){
+    const v = colVal(avgDb, x); if (v > -190){ autoScratch.push(v); if (v > mx) mx = v; }
+    if (S.hold){ const h = colVal(holdDb, x); if (h > -190 && h > mx) mx = h; }
+  }
+  if (!autoScratch.length) return null;
+  autoScratch.sort((a, b) => a - b);
+  const p5 = autoScratch[Math.floor(autoScratch.length*0.05)];
+  let top = Math.ceil((mx + 5)/5)*5, bot = Math.floor((p5 - 5)/5)*5;
+  if (top - bot < 30) bot = top - 30;
+  if (top - bot > 160) bot = top - 160;
+  return [bot, top];
+}
+// fit once and keep: the result becomes the FFT dB range in the settings
+function fitFft(){
+  const r = fftAutoRange(); if (!r) return false;
+  S.dbMin = r[0]; S.dbMax = r[1]; save();
+  VD = [r[0], r[1]]; requestDraw(); return true;
+}
+function fullView(){ setView(0, 1, S.dbMin, S.dbMax); }
+function isZoomed(){ return VU[0] > 1e-6 || VU[1] < 1 - 1e-6 || Math.abs(VD[0] - S.dbMin) > 0.01 || Math.abs(VD[1] - S.dbMax) > 0.01; }
+function fx(f){ return fG.L + (f2frac(f) - VU[0])/(VU[1] - VU[0])*fG.w; }
+function xf(px){ return frac2f(VU[0] + (px/fG.w)*(VU[1] - VU[0])); }
+function yOf(d){ const u = (d - VD[0])/(VD[1] - VD[0]); return fG.T + (1 - clamp(u, -0.02, 1.02))*fG.h; }
+function setView(u0, u1, d0, d1){
+  const su = clamp(u1 - u0, 0.0015, 1); u0 = clamp(u0, 0, 1 - su); VU = [u0, u0 + su];
+  const sd = clamp(d1 - d0, 6, 240); d0 = clamp(d0, -250, 200 - sd); VD = [d0, d0 + sd];
+  buildFftMap(); requestDraw();
+}
+let drawRaf = 0;
+function requestDraw(){
+  if (drawRaf) return;
+  drawRaf = requestAnimationFrame(() => { drawRaf = 0; drawFFT(); placeSpecCursor(); updateCursorInfo(); $('btnZoom').hidden = !isZoomed(); });
+}
+
+function sizeCanvases(){
+  dpr = Math.min(window.devicePixelRatio || 1, 3);
+  for (const cv of [fcv, scv, tcv]){
+    const r = cv.getBoundingClientRect();
+    cv.width = Math.max(Math.round(120*dpr), Math.round(r.width*dpr));
+    cv.height = Math.max(Math.round(80*dpr), Math.round(r.height*dpr));
+  }
+  const L = Math.round(44*dpr);
+  fG = {L, R:Math.round(10*dpr), T:Math.round(10*dpr), B:Math.round(20*dpr)};
+  fG.w = Math.max(20, fcv.width - fG.L - fG.R); fG.h = Math.max(20, fcv.height - fG.T - fG.B);
+  sG = {L, R:Math.round(46*dpr), T:Math.round(4*dpr), B:Math.round(4*dpr)};
+  sG.w = Math.max(20, scv.width - sG.L - sG.R); sG.h = Math.max(20, scv.height - sG.T - sG.B);
+  tG = {L, R:Math.round(10*dpr), T:Math.round(16*dpr), B:Math.round(20*dpr)};
+  tG.w = Math.max(20, tcv.width - tG.L - tG.R); tG.h = Math.max(20, tcv.height - tG.T - tG.B);
+  buildMaps();
+  if (!specRing) clearSpec(); else renderSpec();
+  placeSpecCursor();
+  drawTO();
+}
+let colFc = null;
+function buildFftMap(){
+  const df = fs/N, M = N/2 + 1;
+  if (!colK0 || colK0.length !== fG.w){
+    colK0 = new Int32Array(fG.w); colK1 = new Int32Array(fG.w); colFc = new Float64Array(fG.w); traceY = new Float32Array(fG.w);
+  }
+  for (let x = 0; x < fG.w; x++){
+    // bins whose centre falls inside this pixel column; none → interpolate at the column centre
+    colK0[x] = clamp(Math.ceil(xf(x)/df), 0, M - 1);
+    colK1[x] = clamp(Math.floor(xf(x + 1)/df), -1, M - 1);
+    colFc[x] = xf(x + 0.5);
+  }
+}
+function colVal(arr, x){ return colK1[x] >= colK0[x] ? rangeMax(arr, colK0[x], colK1[x]) : valAt(arr, colFc[x]); }
+function buildMaps(){
+  FR = fRange();
+  const df = fs/N, M = N/2 + 1;
+  // fixed high-resolution rows (0 = lowest frequency) that the spectrogram history is stored in
+  for (let r = 0; r < SPEC_HR; r++){
+    const k0 = clamp(Math.round(frac2f(r/SPEC_HR)/df), 0, M-1);
+    const k1 = clamp(Math.round(frac2f((r + 1)/SPEC_HR)/df), k0, M-1);
+    hrK0[r] = k0; hrK1[r] = k1;
+  }
+  buildFftMap();
+  buildSpecDisp();
+}
+function rangeMax(arr, k0, k1){ let m = arr[k0]; for (let k = k0+1; k <= k1; k++) if (arr[k] > m) m = arr[k]; return m; }
+function fLabel(f){ return f >= 1000 ? parseFloat((f/1000).toPrecision(4)) + 'k' : String(parseFloat(f.toPrecision(5))); }
+function freqTicks(lo, hi, pos, minGapPx){
+  let c = [];
+  if (S.axis === 'log' && hi/Math.max(lo, 1e-9) > 4){
+    const ms = hi/Math.max(lo, 1e-9) <= 30 ? [1, 1.5, 2, 3, 4, 5, 7] : [1, 2, 5];   // denser ticks when zoomed in
+    for (let d = 1; d <= 1e5; d *= 10) for (const m of ms) c.push(m*d);
+  } else {
+    const raw = (hi - lo)/6, p = Math.pow(10, Math.floor(Math.log10(raw))), r = raw/p;
+    const st = (r < 1.5 ? 1 : r < 3.5 ? 2 : r < 7.5 ? 5 : 10)*p;
+    for (let f = Math.ceil(lo/st)*st; f <= hi; f += st) c.push(parseFloat(f.toPrecision(10)));
+  }
+  c = c.filter(f => f >= lo*0.999 && f <= hi*1.001);
+  const out = []; let last = -1e9;
+  for (const f of c){ const q = pos(f); if (q - last >= minGapPx){ out.push(f); last = q; } }
+  return out;
+}
+function dbStep(span){ return span > 80 ? 20 : span > 30 ? 10 : span > 12 ? 5 : 2; }
+function bpfHz(){ return S.blades*S.rpm/60; }
+
+/* ---------- FFT plot ---------- */
+let peaks = [], cursorF = null;
+function drawFFT(){
+  const c = fctx, g = fG, W = fcv.width, H = fcv.height;
+  const inX = x => x >= g.L - 0.5 && x <= g.L + g.w + 0.5;
+  c.clearRect(0, 0, W, H);
+  c.font = `${10.5*dpr}px ${C.num}`;
+  c.lineWidth = Math.max(1, dpr*0.75);
+
+  // dB grid
+  const step = dbStep(VD[1] - VD[0]);
+  c.strokeStyle = C.grid; c.fillStyle = C.muted; c.textAlign = 'right'; c.textBaseline = 'middle';
+  for (let d = Math.ceil(VD[0]/step)*step; d <= VD[1] + 1e-9; d += step){
+    const y = Math.round(yOf(d)) + 0.5;
+    c.beginPath(); c.moveTo(g.L, y); c.lineTo(g.L + g.w, y); c.stroke();
+    c.fillText(String(d), g.L - 5*dpr, clamp(y, g.T + 5*dpr, g.T + g.h - 5*dpr));
+  }
+  // freq grid
+  c.textAlign = 'center'; c.textBaseline = 'top';
+  for (const f of freqTicks(xf(0), xf(g.w), f => fx(f) - g.L, 34*dpr)){
+    const x = Math.round(fx(f)) + 0.5;
+    c.beginPath(); c.moveTo(x, g.T); c.lineTo(x, g.T + g.h); c.stroke();
+    c.fillText(fLabel(f), clamp(x, g.L + 10*dpr, g.L + g.w - 10*dpr), g.T + g.h + 5*dpr);
+  }
+  // BPF markers
+  if (S.bpfOn){
+    const b = bpfHz();
+    c.save(); c.setLineDash([4*dpr, 4*dpr]); c.strokeStyle = C.bpf; c.fillStyle = C.bpf;
+    c.textAlign = 'left'; c.textBaseline = 'top';
+    for (let n = 1; n <= S.harm; n++){
+      const x = Math.round(fx(n*b)) + 0.5; if (!inX(x)) continue;
+      c.beginPath(); c.moveTo(x, g.T); c.lineTo(x, g.T + g.h); c.stroke();
+      c.fillText(n + '×', x + 3*dpr, g.T + 2*dpr);
+    }
+    c.restore();
+  }
+
+  c.save(); c.beginPath(); c.rect(g.L, g.T, g.w, g.h); c.clip();
+  // peak hold
+  if (S.hold){
+    c.beginPath();
+    for (let x = 0; x < g.w; x++){ const y = yOf(colVal(holdDb, x)); x ? c.lineTo(g.L + x, y) : c.moveTo(g.L + x, y); }
+    c.strokeStyle = C.hold; c.lineWidth = Math.max(1, dpr*0.9); c.stroke();
+  }
+  // averaged trace
+  for (let x = 0; x < g.w; x++) traceY[x] = yOf(colVal(avgDb, x));
+  c.beginPath(); c.moveTo(g.L, g.T + g.h);
+  for (let x = 0; x < g.w; x++) c.lineTo(g.L + x, traceY[x]);
+  c.lineTo(g.L + g.w - 1, g.T + g.h); c.closePath(); c.fillStyle = C.fill; c.fill();
+  c.beginPath();
+  for (let x = 0; x < g.w; x++) x ? c.lineTo(g.L + x, traceY[x]) : c.moveTo(g.L, traceY[0]);
+  c.strokeStyle = C.trace; c.lineWidth = Math.max(1.2, dpr*1.3); c.lineJoin = 'round'; c.stroke();
+  const ov = overlayId != null ? resSpec.get(overlayId) : null;
+  if (ov && ov.length === avgDb.length){
+    c.beginPath();
+    for (let x = 0; x < g.w; x++){ const y = yOf(colVal(ov, x)); x ? c.lineTo(g.L + x, y) : c.moveTo(g.L, y); }
+    c.setLineDash([5*dpr, 4*dpr]); c.strokeStyle = C.ink; c.globalAlpha = 0.8; c.lineWidth = Math.max(1, dpr); c.stroke();
+    c.setLineDash([]); c.globalAlpha = 1;
+  }
+  c.restore();
+
+  // top peak marker
+  const p = peaks[0];
+  if (p){
+    const x = fx(p.f);
+    if (inX(x)){
+      const y = yOf(p.db) - 4*dpr, s = 5*dpr;
+      c.beginPath(); c.moveTo(x, y); c.lineTo(x - s, y - s*1.4); c.lineTo(x + s, y - s*1.4); c.closePath();
+      c.fillStyle = C.ink; c.fill();
+    }
+  }
+  // cursor
+  if (cursorF != null){
+    const xr = fx(cursorF);
+    if (inX(xr)){
+      const x = Math.round(xr) + 0.5;
+      c.strokeStyle = C.ink; c.lineWidth = Math.max(1, dpr); c.beginPath(); c.moveTo(x, g.T); c.lineTo(x, g.T + g.h); c.stroke();
+      const y = yOf(valAt(avgDb, cursorF));
+      c.beginPath(); c.arc(x, y, 3.5*dpr, 0, 2*Math.PI); c.fillStyle = C.ink; c.fill();
+      const txt = fmtF(cursorF) + ' Hz';
+      c.font = `600 ${11*dpr}px ${C.num}`;
+      const tw = c.measureText(txt).width + 10*dpr, th = 18*dpr;
+      const bx = (x + 6*dpr + tw > g.L + g.w) ? x - 6*dpr - tw : x + 6*dpr, by = g.T + 4*dpr;
+      c.fillStyle = C.panel; c.globalAlpha = 0.92; c.fillRect(bx, by, tw, th); c.globalAlpha = 1;
+      c.strokeStyle = C.grid; c.lineWidth = 1; c.strokeRect(bx + 0.5, by + 0.5, tw - 1, th - 1);
+      c.fillStyle = C.ink; c.textAlign = 'left'; c.textBaseline = 'middle'; c.fillText(txt, bx + 5*dpr, by + th/2);
+    }
+  }
+}
+
+/* ---------- spectrogram ---------- */
+const CMAPS = {
+  rainbow:[[0,0,128],[0,0,255],[0,128,255],[0,255,255],[128,255,128],[255,255,0],[255,128,0],[255,0,0],[128,0,0]],
+  inferno:[[0,0,4],[40,11,84],[101,21,110],[159,42,99],[212,72,66],[245,125,21],[250,193,39],[252,255,164]],
+  viridis:[[68,1,84],[72,40,120],[62,74,137],[49,104,142],[38,130,142],[31,158,137],[53,183,121],[109,205,89],[180,222,44],[253,231,37]],
+  gray:[[8,10,12],[250,250,250]]
+};
+const lut = new Uint8ClampedArray(256*3);
+function buildLut(){
+  const st = CMAPS[S.cmap] || CMAPS.rainbow;
+  for (let i = 0; i < 256; i++){
+    const t = i/255*(st.length - 1), j = Math.min(st.length - 2, Math.floor(t)), fr = t - j;
+    for (let ch = 0; ch < 3; ch++) lut[i*3 + ch] = st[j][ch] + (st[j+1][ch] - st[j][ch])*fr;
+  }
+}
+/* Spectrogram history: one column per processed frame, stored at SPEC_HR fixed rows over the full
+   frequency axis, so the legend range, colour map, size and frequency zoom can all be redrawn. */
+const SPEC_HR = 1280, SPEC_CAP = 1600;
+const hrK0 = new Int32Array(SPEC_HR), hrK1 = new Int32Array(SPEC_HR);
+let specRing = null, specHead = 0, specFill = 0, specFrame = 0;
+let specRange = [S.specMin, S.specMax];
+let SU = [0, 1];                                   // visible part of the frequency axis
+let dispR0 = null, dispR1 = null;                  // display row → high-res row range
+function specCw(){ return Math.max(1, Math.round(S.speed*dpr)); }
+function specZoomed(){ return SU[0] > 1e-6 || SU[1] < 1 - 1e-6; }
+function suFrac(f){ return (f2frac(f) - SU[0])/(SU[1] - SU[0]); }     // 0 bottom … 1 top of the plot
+function buildSpecDisp(){
+  const h = sG.h;
+  if (!dispR0 || dispR0.length !== h){ dispR0 = new Int32Array(h); dispR1 = new Int32Array(h); }
+  for (let y = 0; y < h; y++){
+    const uTop = SU[1] - (y/h)*(SU[1] - SU[0]), uBot = SU[1] - ((y + 1)/h)*(SU[1] - SU[0]);
+    const r0 = clamp(Math.floor(uBot*SPEC_HR), 0, SPEC_HR - 1);
+    dispR0[y] = r0; dispR1[y] = clamp(Math.ceil(uTop*SPEC_HR) - 1, r0, SPEC_HR - 1);
+  }
+}
+function drawSpecFrame(){
+  const c = sctx, g = sG;
+  c.clearRect(0, 0, scv.width, scv.height);
+  c.font = `${10.5*dpr}px ${C.num}`; c.fillStyle = C.muted; c.textAlign = 'right'; c.textBaseline = 'middle';
+  const lo = frac2f(SU[0]), hi = frac2f(SU[1]);
+  for (const f of freqTicks(lo, hi, f => suFrac(f)*g.h, 16*dpr)){
+    const y = g.T + (1 - suFrac(f))*g.h;
+    c.fillRect(g.L - 3*dpr, Math.round(y), 3*dpr, Math.max(1, dpr));
+    c.fillText(fLabel(f), g.L - 5*dpr, clamp(y, g.T + 6*dpr, g.T + g.h - 6*dpr));
+  }
+  // colour legend
+  const [dlo, dhi] = specRange, bx = g.L + g.w + 7*dpr, bw = Math.round(9*dpr), span = dhi - dlo;
+  for (let y = 0; y < g.h; y++){
+    const i = clamp(((1 - y/(g.h - 1))*255) | 0, 0, 255)*3;
+    c.fillStyle = `rgb(${lut[i]},${lut[i+1]},${lut[i+2]})`;
+    c.fillRect(bx, g.T + y, bw, 1);
+  }
+  c.strokeStyle = C.grid; c.lineWidth = 1; c.strokeRect(bx + 0.5, g.T + 0.5, bw - 1, g.h - 1);
+  c.fillStyle = C.muted; c.textAlign = 'left';
+  const st = dbStep(span);
+  for (let d = Math.ceil(dlo/st)*st; d <= dhi + 1e-9; d += st){
+    const y = g.T + (1 - (d - dlo)/span)*g.h;
+    c.fillRect(bx + bw, Math.round(y), 3*dpr, Math.max(1, dpr));
+    c.fillText(String(d), bx + bw + 5*dpr, clamp(y, g.T + 6*dpr, g.T + g.h - 6*dpr));
+  }
+}
+function bpfRows(){
+  if (!S.bpfOn) return null;
+  const set = new Set(), b = bpfHz(), g = sG;
+  for (let n = 1; n <= S.harm; n++){ const u = suFrac(n*b); if (u >= 0 && u <= 1) set.add(clamp(Math.round((1 - u)*g.h), 0, g.h - 1)); }
+  return set;
+}
+// paint one stored frame (ring index idx) into pixel columns [x0, x0+w) of an ImageData of width stride
+function paintFrame(d, stride, x0, w, idx, marks, dashOn){
+  const g = sG, [lo, hi] = specRange, span = hi - lo, base = idx*SPEC_HR;
+  const mc = S.cmap === 'rainbow' ? [255, 255, 255] : [255, 120, 220];
+  for (let y = 0; y < g.h; y++){
+    let v = specRing[base + dispR0[y]];
+    for (let r = dispR0[y] + 1; r <= dispR1[y]; r++){ const q = specRing[base + r]; if (q > v) v = q; }
+    const i = clamp(((v - lo)/span*255) | 0, 0, 255)*3;
+    let R = lut[i], G = lut[i+1], B = lut[i+2];
+    if (dashOn && marks && marks.has(y)){ R = mc[0]; G = mc[1]; B = mc[2]; }
+    for (let x = 0; x < w; x++){ const o = (y*stride + x0 + x)*4; d[o] = R; d[o+1] = G; d[o+2] = B; d[o+3] = 255; }
+  }
+}
+function clearSpec(){
+  if (!specRing) specRing = new Float32Array(SPEC_CAP*SPEC_HR);
+  specHead = 0; specFill = 0;
+  specRange = [S.specMin, S.specMax];
+  renderSpec();
+}
+function renderSpec(){
+  if (!specRing || !dispR0) return;
+  drawSpecFrame();
+  const g = sG, img = sctx.createImageData(g.w, g.h), d = img.data;
+  const i0 = lut[0], i1 = lut[1], i2 = lut[2];
+  for (let o = 0; o < d.length; o += 4){ d[o] = i0; d[o+1] = i1; d[o+2] = i2; d[o+3] = 255; }
+  const marks = bpfRows(), cw = specCw();
+  for (let a = 0; a < specFill; a++){                       // a = 0 is the newest frame
+    const x0 = g.w - (a + 1)*cw; if (x0 + cw <= 0) break;
+    const idx = (specHead - 1 - a + SPEC_CAP*2) % SPEC_CAP;
+    const xs = Math.max(0, x0);
+    paintFrame(d, g.w, xs, x0 + cw - xs, idx, marks, ((specFrame - 1 - a) % 8 + 8) % 8 < 4);
+  }
+  sctx.putImageData(img, g.L, g.T);
+}
+let specRaf = 0;
+function requestSpecRender(){
+  if (specRaf) return;
+  specRaf = requestAnimationFrame(() => { specRaf = 0; renderSpec(); placeSpecCursor(); $('btnSpecFull').hidden = !specZoomed(); });
+}
+function setSpecView(u0, u1){
+  const su = clamp(u1 - u0, 0.02, 1); u0 = clamp(u0, 0, 1 - su);
+  SU = [u0, u0 + su]; buildSpecDisp(); requestSpecRender();
+}
+function setSpecRange(lo, hi, persist){
+  const sp = clamp(hi - lo, 10, 160); lo = clamp(lo, -250, 200 - sp);
+  specRange = [lo, lo + sp];
+  if (persist){ S.specMin = Math.round(specRange[0]); S.specMax = Math.round(specRange[1]); specRange = [S.specMin, S.specMax]; save(); }
+  requestSpecRender();
+}
+// one-shot fit from the stored frames in the visible frequency range
+function specAutoRange(){
+  if (specFill < 5) return null;
+  const n = Math.min(specFill, 300), r0 = clamp(Math.floor(SU[0]*SPEC_HR), 0, SPEC_HR - 1), r1 = clamp(Math.ceil(SU[1]*SPEC_HR) - 1, r0, SPEC_HR - 1);
+  const step = Math.max(1, Math.floor((r1 - r0)/240)), floors = [], tmp = [];
+  let mx = -1e9;
+  for (let a = 0; a < n; a++){
+    const base = ((specHead - 1 - a + SPEC_CAP*2) % SPEC_CAP)*SPEC_HR;
+    tmp.length = 0;
+    for (let r = r0; r <= r1; r += step){ const v = specRing[base + r]; tmp.push(v); if (v > mx) mx = v; }
+    tmp.sort((x, y) => x - y); floors.push(tmp[Math.floor(tmp.length*0.1)]);
+  }
+  floors.sort((x, y) => x - y);
+  const hi = Math.ceil(mx/5)*5; let lo = Math.floor((floors[floors.length >> 1] - 3)/5)*5;
+  if (hi - lo < 30) lo = hi - 30;
+  if (hi - lo > 120) lo = hi - 120;
+  return [lo, hi];
+}
+function fitSpec(quiet){
+  const r = specAutoRange();
+  if (!r){ if (!quiet) setStatus('데이터가 조금 더 쌓인 뒤에 눌러 주세요.'); return false; }
+  setSpecRange(r[0], r[1], true); return true;
+}
+let autoPending = {fft:false, spec:false, t0:0};
+function armAuto(){ autoPending = {fft:S.fftAuto, spec:S.specAuto, t0:performance.now()}; }
+function pushSpecColumn(){
+  const g = sG, cw = specCw(), idx = specHead, base = idx*SPEC_HR;
+  for (let r = 0; r < SPEC_HR; r++) specRing[base + r] = rangeMax(pDb, hrK0[r], hrK1[r]);
+  specHead = (specHead + 1) % SPEC_CAP; specFill = Math.min(SPEC_CAP, specFill + 1);
+  specFrame++;
+  sctx.drawImage(scv, g.L + cw, g.T, g.w - cw, g.h, g.L, g.T, g.w - cw, g.h);
+  if (!colImg || colImg.width !== cw || colImg.height !== g.h) colImg = sctx.createImageData(cw, g.h);
+  paintFrame(colImg.data, cw, 0, cw, idx, bpfRows(), ((specFrame - 1) % 8) < 4);
+  sctx.putImageData(colImg, g.L + g.w - cw, g.T);
+}
+
+/* ---------- peaks & readouts ---------- */
+function findPeaks(){ peaks = findPeaksIn(avgDb); }
+function findPeaksIn(avgDb){
+  const df = fs/N, M = N/2 + 1;
+  const k0 = Math.max(2, Math.ceil(FR[0]/df)), k1 = Math.min(M - 3, Math.floor(FR[1]/df));
+  const cand = [];
+  for (let k = k0; k <= k1; k++){
+    const v = avgDb[k];
+    if (v > avgDb[k-1] && v >= avgDb[k+1] && v > avgDb[k-2] && v >= avgDb[k+2] && v > S.dbMin) cand.push(k);
+  }
+  cand.sort((a, b) => avgDb[b] - avgDb[a]);
+  const sep = WIN_LOBE[S.win] || 3, out = [];
+  for (const k of cand){
+    if (out.some(p => Math.abs(p.k - k) <= sep)) continue;
+    const a = avgDb[k-1], b = avgDb[k], c = avgDb[k+1], den = a - 2*b + c;
+    const dl = den !== 0 ? clamp(0.5*(a - c)/den, -0.5, 0.5) : 0;
+    out.push({k, f:(k + dl)*df, db:b - 0.25*(a - c)*dl});
+    if (out.length >= 5) break;
+  }
+  return out;
+}
+function fmtF(f){ return f < 100 ? f.toFixed(2) : f < 1000 ? f.toFixed(1) : f.toFixed(0); }
+const pkBody = $('pkBody');
+for (let i = 0; i < 5; i++){
+  const tr = document.createElement('tr');
+  tr.innerHTML = `<td>${i+1}</td><td>—</td><td>—</td><td class="bpfcol">—</td>`;
+  pkBody.appendChild(tr);
+}
+let fpsT0 = 0, frames = 0, fpsMeas = 0;
+function updateReadouts(){
+  const unit = S.cal !== 0 ? 'dB' : 'dBFS';
+  $('roU1').textContent = unit;
+  $('roU2').textContent = S.cal !== 0 ? (S.weight === 'A' ? 'dB(A)' : 'dB') : 'dBFS';
+  const p = peaks[0];
+  $('roPkF').textContent = p ? fmtF(p.f) : '—';
+  $('roPkL').textContent = p ? p.db.toFixed(1) : '—';
+  $('roOvK').textContent = `OASPL (${S.weight}) · ${fLabel(Math.round(FR[0]))}–${fLabel(Math.round(FR[1]))}`;
+  const oa = computeOaspl();
+  $('roOv').textContent = oa == null ? '—' : oa.toFixed(1);
+  $('roIn').textContent = inPkShow < -150 ? '−∞' : inPkShow.toFixed(1);
+  $('fftInfo').textContent = `${N.toLocaleString()} pt · Δf ${(fs/N).toFixed(2)} Hz · ${S.scale === 'rms' ? 'RMS' : '피크'} · ${WIN_NAME[S.win]} · 평균 ${S.avg}${S.weight === 'A' ? ' · A' : ''}`;
+  $('specInfo').textContent = `${(fs/1000).toFixed(1)} kHz`;
+  const rate = fpsMeas > 1 ? fpsMeas : S.fps;
+  const secs = (sG.w/Math.max(1, Math.round(S.speed*dpr)))/rate;
+  $('specSpan').textContent = `화면 폭 ≈ ${secs < 10 ? secs.toFixed(1) : secs.toFixed(0)}초`;
+  const tbl = $('pkTable'); tbl.classList.toggle('nobpf', !S.bpfOn);
+  $('pkNote').textContent = S.bpfOn ? `BPF ${bpfHz().toFixed(1)} Hz 기준` : '';
+  const rows = pkBody.rows, b = bpfHz();
+  for (let i = 0; i < 5; i++){
+    const q = peaks[i], cells = rows[i].cells;
+    cells[1].textContent = q ? fmtF(q.f) : '—';
+    cells[2].textContent = q ? q.db.toFixed(1) : '—';
+    cells[3].textContent = q ? (q.f/b).toFixed(2) + '×' : '—';
+  }
+  updateCursorInfo();
+}
+function valAt(arr, f){
+  const kf = clamp(f*N/fs, 0, N/2), k = Math.floor(kf), k2 = Math.min(N/2, k + 1);
+  return arr[k] + (arr[k2] - arr[k])*(kf - k);
+}
+function updateCursorInfo(){
+  const el = $('cursorInfo');
+  if (cursorF == null){ el.textContent = '끌기 커서 · 핀치 확대 · 두 번 탭 원위치'; return; }
+  let t = `커서 ${fmtF(cursorF)} Hz · ${valAt(avgDb, cursorF).toFixed(1)} dB`;
+  if (S.bpfOn) t += ` · ${(cursorF/bpfHz()).toFixed(2)}×BPF`;
+  el.textContent = t;
+}
+
+/* ---------- sound quality panel ---------- */
+let toL = null;
+// arr: averaged amplitude-corrected line power (display weighting/scale), as avgP. Returns all metrics.
+function metricsFrom(arr, E, db){
+  const df = fs/N, M = N/2 + 1, ACF = N/sumW, ECF = Math.sqrt(N/sumW2);
+  const g = (ECF/ACF)*(ECF/ACF)*(S.scale === 'rms' ? 1 : 0.5)*Math.pow(10, S.cal/10);
+  for (let k = 0; k < M; k++){ const w = wLin[k]; E[k] = w > 1e-12 ? arr[k]/w*g : 0; }
+  const m = {};
+  const k0 = Math.max(1, Math.ceil(FR[0]/df)), k1 = Math.min(M - 2, Math.floor(FR[1]/df));
+  let sz = 0, sa = 0, sw = 0;
+  for (let k = k0; k <= k1; k++){ sz += E[k]; sa += E[k]*aLinK[k]; sw += E[k]*wLin[k]; }
+  m.lz = 10*Math.log10(sz + 1e-30); m.la = 10*Math.log10(sa + 1e-30); m.oa = 10*Math.log10(sw + 1e-30);
+  m.toL = SQ.thirdOctLevels(toBands, E);
+  const i0 = toBands.findIndex(b => b.nom === 25), i1 = toBands.findIndex(b => b.nom === 12500);
+  if (i0 === 0 && i1 === 27){
+    const ld = SQ.loudness(m.toL.slice(0, 28), S.field === 'diffuse');
+    m.N = ld.N; m.LN = ld.LN; m.over = ld.over; m.S = ld.N >= 0.1 ? SQ.sharpnessDin(ld.N, ld.NS) : null;
+  }
+  const pk = findPeaksIn(db), cand = pk.map(p => p.f), bpf = [];
+  if (S.bpfOn){ const b = bpfHz(); for (let n = 1; n <= S.harm; n++){ const f = refineTone(n*b, db); cand.push(f); bpf.push(f); } }
+  m.best = null;
+  for (const f of cand){
+    const r = SQ.prominence(E, df, f);
+    if (r && (!m.best || r.pr - r.crit > m.best.pr - m.best.crit)) m.best = r;
+  }
+  m.bpf = bpf.length ? SQ.prominence(E, df, bpf[0]) : null;
+  if (m.bpf) m.bpf.f = bpf[0];
+  return m;
+}
+function refineTone(f, db){
+  const df = fs/N, k = Math.round(f/df), r = Math.max(3, Math.round(f*0.01/df));
+  let best = k;
+  for (let i = Math.max(1, k - r); i <= Math.min(N/2 - 1, k + r); i++) if (db[i] > db[best]) best = i;
+  return best*df;
+}
+function calLabel(){
+  if (S.cal === 0) return '보정 전 · 상대값';
+  if (S.calSrc === 'est') return '추정 보정 · 실제와 수 dB 차이 가능';
+  if (S.calSrc === 'manual') return '수동 보정';
+  return '';
+}
+function updateSQ(){
+  if (!avgCount || !toBands) return;
+  const m = metricsFrom(avgP, Ebuf, avgDb);
+  toL = m.toL;
+  if (m.N != null){
+    $('sqN').textContent = m.N < 10 ? m.N.toFixed(2) : m.N.toFixed(1);
+    $('sqNsub').textContent = `${m.LN.toFixed(1)} phon · ${S.field === 'diffuse' ? '확산' : '자유'}음장${m.over ? ' · 120 dB 초과' : ''}`;
+    $('sqS').textContent = m.S != null ? m.S.toFixed(2) : '—';
+    $('sqSsub').textContent = m.S != null ? (m.S < 1.2 ? '둔한 편' : m.S < 2 ? '보통' : '날카로운 편') : '라우드니스 0.1 sone 미만';
+  }
+  const best = m.best;
+  if (best){
+    $('sqPR').textContent = best.pr.toFixed(1);
+    $('sqPRsub').innerHTML = `${fmtF(best.f)} Hz · 기준 ${best.crit.toFixed(1)}<span class="tag${best.prominent ? ' on' : ''}">${best.prominent ? '두드러짐' : '기준 이하'}</span>`;
+  } else { $('sqPR').textContent = '—'; $('sqPRsub').textContent = '89 Hz–11.2 kHz 안에 후보 톤 없음'; }
+  const bEl = $('sqBPF');
+  if (S.bpfOn){ bEl.hidden = false; bEl.textContent = m.bpf ? `BPF ${fmtF(m.bpf.f)} Hz: PR ${m.bpf.pr.toFixed(1)} dB` : 'BPF가 평가 범위 밖'; }
+  else bEl.hidden = true;
+  const cal = S.cal !== 0;
+  $('sqLA').textContent = m.la.toFixed(1);
+  $('sqLAu').textContent = cal ? 'dBA' : 'dBFS(A)';
+  $('sqLZ').textContent = `${m.lz.toFixed(1)} ${cal ? 'dBZ' : 'dBFS(Z)'} · ${fLabel(Math.round(FR[0]))}–${fLabel(Math.round(FR[1]))} Hz`;
+  $('sqWarn').textContent = calLabel();
+  drawTO();
+}
+function drawTO(){
+  const c = tctx, g = tG; if (!g) return;
+  c.clearRect(0, 0, tcv.width, tcv.height);
+  c.font = `${10.5*dpr}px ${C.num}`;
+  if (!toL || !toBands){ return; }
+  const Lw = toL.map((v, i) => v + (S.weight === 'A' ? aWeightDb(toBands[i].nom) : 0));
+  const mx = Math.max(...Lw), top = Math.ceil((mx + 3)/10)*10, bot = top - 70;
+  const y = v => g.T + (1 - clamp((v - bot)/(top - bot), 0, 1))*g.h;
+  c.strokeStyle = C.grid; c.fillStyle = C.muted; c.lineWidth = Math.max(1, dpr*0.75);
+  c.textAlign = 'right'; c.textBaseline = 'middle';
+  for (let d = bot; d <= top; d += 10){ const yy = Math.round(y(d)) + 0.5; c.beginPath(); c.moveTo(g.L, yy); c.lineTo(g.L + g.w, yy); c.stroke(); c.fillText(String(d), g.L - 5*dpr, yy); }
+  const n = Lw.length, bw = g.w/n, gap = Math.max(1, bw*0.18), b = bpfHz();
+  let imax = 0; Lw.forEach((v, i) => { if (v > Lw[imax]) imax = i; });
+  for (let i = 0; i < n; i++){
+    const x = g.L + i*bw + gap/2, yy = y(Lw[i]);
+    const fc = toBands[i].fc, hasBpf = S.bpfOn && b >= fc/Math.pow(2, 1/6) && b < fc*Math.pow(2, 1/6);
+    c.fillStyle = hasBpf ? C.bpf : i === imax ? C.trace : C.hold;
+    c.globalAlpha = i === imax || hasBpf ? 1 : 0.75;
+    c.fillRect(x, yy, bw - gap, g.T + g.h - yy);
+  }
+  c.globalAlpha = 1;
+  c.fillStyle = C.muted; c.textAlign = 'center'; c.textBaseline = 'top';
+  for (let i = 0; i < n; i++){
+    if ([31.5, 63, 125, 250, 500, 1000, 2000, 4000, 8000, 16000].indexOf(toBands[i].nom) < 0) continue;
+    c.fillText(fLabel(toBands[i].nom), g.L + (i + 0.5)*bw, g.T + g.h + 5*dpr);
+  }
+  c.fillStyle = C.ink; c.textBaseline = 'bottom';
+  c.fillText(Lw[imax].toFixed(1), clamp(g.L + (imax + 0.5)*bw, g.L + 14*dpr, g.L + g.w - 14*dpr), y(Lw[imax]) - 2*dpr);
+  const u = S.cal !== 0 ? 'dB' : 'dBFS';
+  $('toInfo').textContent = `${S.weight} 가중 · ${u}`;
+  $('toPeak').textContent = `최대 ${fLabel(toBands[imax].nom)} Hz ${Lw[imax].toFixed(1)} ${u}`;
+}
+
+/* ---------- timed average (Leq-style energy average of the line spectra) ---------- */
+const RKEY = 'pocketSpectrum.results';
+let meas = null, results = [], overlayId = null, refId = null;
+const resSpec = new Map();
+try { const r = JSON.parse(localStorage.getItem(RKEY) || 'null'); if (r && Array.isArray(r.list)){ results = r.list; refId = r.ref ?? null; } } catch (e) {}
+function saveResults(){ try { localStorage.setItem(RKEY, JSON.stringify({list:results, ref:refId})); } catch (e) {} }
+function startMeas(){
+  if (mode === 'idle'){ setStatus('측정 시작이나 파일 재생 중에 눌러 주세요.', true); return; }
+  if (frozen){ setStatus('멈춤을 풀고 눌러 주세요.', true); return; }
+  meas = {dur:S.measDur, t0:performance.now(), frames:0, sum:new Float64Array(N/2 + 1), name:$('measName').value.trim()};
+  updateMeasUI();
+}
+function abortMeas(msg){ meas = null; updateMeasUI(); if (msg) setStatus(msg, true); }
+function finishMeas(){
+  const m0 = meas; meas = null;
+  if (!m0.frames){ updateMeasUI(); return; }
+  const M = N/2 + 1, arr = new Float64Array(M), db = new Float32Array(M);
+  for (let k = 0; k < M; k++){ arr[k] = m0.sum[k]/m0.frames; db[k] = 10*Math.log10(arr[k] + 1e-30) + S.cal; }
+  const m = metricsFrom(arr, new Float64Array(M), db);
+  const id = Date.now();
+  const r = {id, name: m0.name || `측정 ${results.length + 1}`,
+    time: new Date().toLocaleTimeString('ko-KR', {hour:'2-digit', minute:'2-digit', second:'2-digit'}),
+    dur: m0.dur, frames: m0.frames, la: m.la, lz: m.lz, oa: m.oa, weight: S.weight, band: [Math.round(FR[0]), Math.round(FR[1])],
+    N: m.N ?? null, LN: m.LN ?? null, S: m.S ?? null,
+    pr: m.best ? m.best.pr : null, prF: m.best ? m.best.f : null, prOn: m.best ? m.best.prominent : null,
+    bpfPr: m.bpf ? m.bpf.pr : null, cal: S.cal, calSrc: S.calSrc, fft: N, win: S.win};
+  results.push(r); if (results.length > 30) results.shift();
+  if (refId == null || !results.some(x => x.id === refId)) refId = results[0].id;
+  resSpec.set(id, db); overlayId = id;
+  saveResults(); renderResults(); updateMeasUI(); requestDraw();
+  $('measName').value = '';
+  setStatus(`'${r.name}' ${r.dur}초 평균: LA ${r.la.toFixed(1)} · LZ ${r.lz.toFixed(1)}${r.N != null ? ` · ${r.N.toFixed(2)} sone` : ''}`);
+}
+function updateMeasUI(){
+  const b = $('btnMeas'), st = $('measState'), bar = $('measBar');
+  if (meas){
+    const el = Math.min(meas.dur, (performance.now() - meas.t0)/1000);
+    b.textContent = '취소'; b.classList.add('stop');
+    st.textContent = `${el.toFixed(1)} / ${meas.dur} s`;
+    bar.style.width = (el/meas.dur*100) + '%';
+  } else {
+    b.textContent = '평균 측정'; b.classList.remove('stop');
+    st.textContent = results.length ? `결과 ${results.length}개` : '';
+    bar.style.width = '0%';
+  }
+}
+function fmt1(v){ return v == null ? '—' : v.toFixed(1); }
+function renderResults(){
+  const body = $('resBody'); body.textContent = '';
+  $('resWrap').hidden = $('resActions').hidden = results.length === 0;
+  const ref = results.find(x => x.id === refId) || results[0];
+  for (const r of results.slice().reverse()){
+    const tr = document.createElement('tr');
+    if (r.id === overlayId) tr.className = 'sel';
+    const d = ref && r.id !== ref.id ? r.la - ref.la : null;
+    const cells = [
+      [`${r.name}`, ''], [fmt1(r.la), ''], [fmt1(r.lz), ''],
+      [r.N == null ? '—' : (r.N < 10 ? r.N.toFixed(2) : r.N.toFixed(1)), ''],
+      [r.pr == null ? '—' : r.pr.toFixed(1), r.prOn ? 'dpos' : ''],
+      [d == null ? (r.id === (ref && ref.id) ? '기준' : '—') : Math.abs(d) < 0.05 ? '0.0' : (d > 0 ? '+' : '') + d.toFixed(1), d == null ? '' : d > 0.05 ? 'dpos' : d < -0.05 ? 'dneg' : '']
+    ];
+    for (const [t, cls] of cells){ const td = document.createElement('td'); td.textContent = t; if (cls) td.className = cls; tr.appendChild(td); }
+    tr.cells[0].title = `${r.time} · ${r.dur}초 · ${r.weight} 가중 OASPL ${fmt1(r.oa)} · 보정 ${r.cal} dB`;
+    const act = document.createElement('td');
+    const star = document.createElement('button'); star.type = 'button'; star.className = 'star' + (r.id === (ref && ref.id) ? ' on' : '');
+    star.textContent = '★'; star.setAttribute('aria-label', `${r.name}을 기준으로`);
+    star.addEventListener('click', e => { e.stopPropagation(); refId = r.id; saveResults(); renderResults(); });
+    const del = document.createElement('button'); del.type = 'button'; del.textContent = '×'; del.setAttribute('aria-label', `${r.name} 삭제`);
+    del.addEventListener('click', e => { e.stopPropagation(); results = results.filter(x => x.id !== r.id); resSpec.delete(r.id); if (overlayId === r.id) overlayId = null; if (refId === r.id) refId = results.length ? results[0].id : null; saveResults(); renderResults(); updateMeasUI(); requestDraw(); });
+    act.append(star, del); tr.appendChild(act);
+    tr.addEventListener('click', () => {
+      if (!resSpec.has(r.id)){ setStatus('이전 세션의 결과는 숫자만 남아 있어 곡선을 겹쳐 볼 수 없습니다.'); return; }
+      overlayId = overlayId === r.id ? null : r.id; renderResults(); requestDraw();
+    });
+    body.appendChild(tr);
+  }
+}
+$('measDur').value = String(S.measDur);
+$('measDur').addEventListener('change', e => { S.measDur = parseInt(e.target.value, 10) || 10; save(); });
+$('btnMeas').addEventListener('click', () => { if (meas) abortMeas('평균 측정을 취소했습니다.'); else startMeas(); });
+$('btnCsv').addEventListener('click', async () => {
+  const head = ['이름', '시각', '시간_s', 'LA_dB', 'LZ_dB', 'OASPL_dB', 'OASPL_가중', '대역_Hz', 'loudness_sone', 'LN_phon', 'sharpness_acum', 'PR_dB', 'PR_Hz', 'PR_두드러짐', 'BPF_PR_dB', '보정_dB', '보정_방식', 'FFT', '윈도우'];
+  const q = v => v == null ? '' : typeof v === 'number' ? String(Math.round(v*100)/100) : `"${String(v).replace(/"/g, '""')}"`;
+  const rows = results.map(r => [r.name, r.time, r.dur, r.la, r.lz, r.oa, r.weight, `${r.band[0]}-${r.band[1]}`, r.N, r.LN, r.S, r.pr, r.prF, r.prOn == null ? '' : r.prOn ? 'Y' : 'N', r.bpfPr, r.cal, r.calSrc, r.fft, r.win].map(q).join(','));
+  const txt = [head.join(','), ...rows].join('\n');
+  try { await navigator.clipboard.writeText(txt); setStatus(`결과 ${results.length}개를 CSV로 복사했습니다. 엑셀에 붙여 넣으세요.`); }
+  catch (e){ setStatus('복사하지 못했습니다. 브라우저의 클립보드 권한을 확인해 주세요.', true); }
+});
+let clrArmed = 0;
+$('btnClr').addEventListener('click', () => {
+  const b = $('btnClr');
+  if (Date.now() - clrArmed > 3000){ clrArmed = Date.now(); b.textContent = '한 번 더 누르면 삭제'; setTimeout(() => { b.textContent = '전체 삭제'; }, 3000); return; }
+  results = []; resSpec.clear(); overlayId = null; refId = null; clrArmed = 0; b.textContent = '전체 삭제';
+  saveResults(); renderResults(); updateMeasUI(); requestDraw();
+});
+
+/* ---------- input level & mic health ---------- */
+let inPk = -200, inPkShow = -200, silentFrames = 0, silenceWarned = false, stallFrames = 0, lastSig = NaN;
+const meterBar = document.getElementById('meterBar');
+function measureInput(){
+  const hop = Math.min(TBUF_N, Math.max(256, Math.round(fs/S.fps)));
+  let pk = 0;
+  for (let i = TBUF_N - hop; i < TBUF_N; i++){ const a = Math.abs(tbuf[i]); if (a > pk) pk = a; }
+  inPk = 20*Math.log10(pk + 1e-12);
+  inPkShow = inPk > inPkShow ? inPk : inPkShow - 1.2;      // fast attack, slow release
+  meterBar.style.width = clamp((inPkShow + 90)/90*100, 0, 100) + '%';
+  meterBar.classList.toggle('hot', inPk > -1);
+  if (mode !== 'mic') return;
+  const sig = tbuf[TBUF_N - 1] + 3*tbuf[TBUF_N - 97] + 7*tbuf[TBUF_N - 1013] + 11*tbuf[TBUF_N - 4099];
+  if (pk > 0 && sig === lastSig){ if (++stallFrames > S.fps*1.5) recoverAudio(); }
+  else stallFrames = 0;
+  lastSig = sig;
+  if (pk === 0){
+    silentFrames++;
+    if (!silenceWarned && silentFrames > S.fps*2){
+      silenceWarned = true;
+      setStatus('마이크 신호가 완전히 0으로 들어옵니다. 시스템이나 보안 앱이 마이크를 막고 있거나, 다른 앱이 마이크를 쓰고 있을 가능성이 큽니다.', true);
+    }
+  } else {
+    if (silenceWarned){ silenceWarned = false; reportTrack(); }
+    silentFrames = 0;
+  }
+}
+
+/* ---------- main loop ---------- */
+let lastT = 0, lastRO = 0, lastSQ = 0;
+function loop(t){
+  requestAnimationFrame(loop);
+  if (frozen || mode === 'idle') return;
+  if (t - lastT < 1000/S.fps - 3) return;
+  lastT = t;
+  if (mode === 'demo') genDemo();
+  else if (analyser) analyser.getFloatTimeDomainData(tbuf);
+  else return;
+  measureInput();
+  processFrame();
+  drawFFT();
+  pushSpecColumn();
+  frames++;
+  if (t - fpsT0 > 1000){ fpsMeas = frames*1000/(t - fpsT0); frames = 0; fpsT0 = t; }
+  if (t - lastRO > 160){
+    lastRO = t; findPeaks(); updateReadouts();
+  }
+  if (autoPending.fft && avgCount >= 10 && t - autoPending.t0 > 1200){ autoPending.fft = false; fitFft(); }
+  if (autoPending.spec && specFill >= 30 && t - autoPending.t0 > 2000){ autoPending.spec = false; fitSpec(true); }
+  if (t - lastSQ > 500){ lastSQ = t; updateSQ(); }
+  if (meas){ if (performance.now() - meas.t0 >= meas.dur*1000) finishMeas(); else updateMeasUI(); }
+}
+
+/* ---------- audio sources ---------- */
+function setStatus(msg, err){ const el = $('status'); el.textContent = msg || ''; el.classList.toggle('err', !!err); }
+function ensureCtx(){
+  if (actx) return;
+  const AC = window.AudioContext || window.webkitAudioContext;
+  actx = new AC();
+  analyser = actx.createAnalyser();
+  analyser.fftSize = TBUF_N;
+  analyser.smoothingTimeConstant = 0;
+  sink = actx.createGain(); sink.gain.value = 0;
+  analyser.connect(sink); sink.connect(actx.destination);
+  actx.onstatechange = () => { if (mode === 'mic' && actx.state !== 'running') recoverAudio(); };
+}
+/* the browser can suspend audio or end the mic track (screen lock, call, tab in background);
+   bring it back instead of leaving a frozen picture */
+let recovering = false, lastRecover = 0, recoverCount = 0, recoverWindow = 0, tapArmed = false;
+async function recoverAudio(force){
+  if (mode !== 'mic' || recovering || micStarting || document.visibilityState !== 'visible') return;
+  const now = performance.now();
+  if (!force && now - lastRecover < 3000) return;
+  if (now - recoverWindow > 60000){ recoverWindow = now; recoverCount = 0; }
+  if (++recoverCount > 4){ setStatus('마이크가 계속 끊깁니다. 정지 후 측정 시작을 다시 눌러 주세요. 그래도 안 되면 다른 앱이 마이크를 쓰는지 확인해 주세요.', true); return; }
+  lastRecover = now; recovering = true;
+  try {
+    const tr = stream && stream.getAudioTracks()[0];
+    if (!tr || tr.readyState === 'ended'){ setStatus('마이크 연결이 끊겨 다시 연결합니다…'); await startMic(true); return; }
+    if (actx && actx.state !== 'running') await actx.resume().catch(() => {});
+    if (actx && actx.state !== 'running') armTapResume();
+    else { stallFrames = 0; reportTrack(); }
+  } finally { recovering = false; }
+}
+function armTapResume(){
+  setStatus('오디오가 멈췄습니다. 화면을 한 번 누르면 다시 시작합니다.', true);
+  if (tapArmed) return; tapArmed = true;
+  const h = () => {
+    document.removeEventListener('pointerdown', h, true); tapArmed = false;
+    if (!actx) return;
+    actx.resume().then(() => { if (mode === 'mic'){ stallFrames = 0; reportTrack(); } }).catch(() => {});
+  };
+  document.addEventListener('pointerdown', h, true);
+}
+function setFs(v){
+  if (v && v !== fs){ fs = v; prepWeights(); buildMaps(); clearSpec(); updateDerived(); }
+}
+function releaseWake(){ if (wakeLock){ wakeLock.release().catch(() => {}); wakeLock = null; } }
+async function requestWake(){ try { if ('wakeLock' in navigator) wakeLock = await navigator.wakeLock.request('screen'); } catch (e) {} }
+function stopSources(){
+  if (meas) abortMeas('입력이 바뀌어 평균 측정을 취소했습니다.');
+  if (stream){ stream.getTracks().forEach(tr => tr.stop()); stream = null; }
+  if (srcNode){ try { srcNode.disconnect(); } catch (e) {} srcNode = null; }
+  if (fileNode){ fileNode.onended = null; try { fileNode.stop(); } catch (e) {} try { fileNode.disconnect(); } catch (e) {} fileNode = null; }
+  if (actx && actx.state === 'suspended') actx.resume().catch(() => {});
+  releaseWake();
+}
+function micErr(err){
+  let framed = false; try { framed = window.self !== window.top; } catch (_) { framed = true; }
+  let m = micErrText(err);
+  if (framed) m += ' 다른 앱 안의 미리보기 화면에서는 마이크가 막힙니다. 브라우저에서 직접 열어 주세요.';
+  if (location.protocol === 'content:' || location.protocol === 'file:')
+    m += ' 폰에 저장된 파일로 열면 크롬이 권한을 오래 기억하지 못합니다. 다운로드 목록에서 파일을 다시 열면 대부분 해결됩니다.';
+  return m;
+}
+function micErrText(err){
+  const n = err && err.name;
+  if (n === 'NotAllowedError' || n === 'SecurityError')
+    return '마이크 권한이 거부됐습니다. 브라우저 사이트 설정에서 마이크를 허용해 주세요. 회사 보안 앱이 마이크를 막은 경우에는 여기서 풀 수 없습니다.';
+  if (n === 'NotFoundError') return '마이크를 찾지 못했습니다.';
+  if (n === 'NotReadableError' || n === 'AbortError')
+    return '마이크를 열 수 없습니다. 통화 중이거나 다른 앱(보안 앱 포함)이 마이크를 쓰거나 막고 있을 수 있습니다.';
+  if (n === 'OverconstrainedError') return '요청한 입력 설정을 이 기기가 지원하지 않습니다. 설정에서 마이크 입력 항목을 바꿔 보세요.';
+  return `마이크를 시작하지 못했습니다 (${n || '알 수 없는 오류'}).`;
+}
+function reportTrack(){
+  const tr = stream && stream.getAudioTracks()[0]; if (!tr) return;
+  const s = tr.getSettings ? tr.getSettings() : {};
+  const f = v => v === undefined ? '확인 불가' : (v ? '켜짐' : '꺼짐');
+  let txt = `적용된 입력 처리: 자동 이득 ${f(s.autoGainControl)} · 노이즈 억제 ${f(s.noiseSuppression)} · 에코 제거 ${f(s.echoCancellation)} · ${(actx.sampleRate/1000).toFixed(1)} kHz`;
+  const diff = (s.autoGainControl === true && !S.agc) || (s.noiseSuppression === true && !S.ns) || (s.echoCancellation === true && !S.ec);
+  if (diff) txt += ' — 요청과 다릅니다. 이 브라우저가 일부 설정을 무시했습니다.';
+  $('trackInfo').textContent = txt;
+  setStatus(diff ? txt : `측정 중 · ${txt.replace('적용된 입력 처리: ', '')}`, diff);
+}
+let micStarting = false;
+async function startMic(auto){
+  if (micStarting) return;
+  if (!window.isSecureContext){ mode = 'idle'; updateUI(); setStatus(`마이크는 https:// 주소에서만 켤 수 있습니다. 지금 주소(${location.protocol}//…)에서는 브라우저가 마이크를 막습니다.`, true); return; }
+  if (!navigator.mediaDevices || !navigator.mediaDevices.getUserMedia){ setStatus('이 브라우저는 마이크 입력을 지원하지 않습니다.', true); return; }
+  micStarting = true;
+  stopSources();
+  setStatus(auto ? '마이크를 다시 연결하는 중…' : '마이크 권한을 요청하는 중…');
+  const waitTimer = setTimeout(() => {
+    setStatus('마이크 허용 창을 기다리는 중입니다. 창이 보이지 않으면 지금 화면에서는 마이크를 쓸 수 없습니다. 크롬이나 사파리에서 https 주소로 열어 주세요.', true);
+  }, 6000);
+  try {
+    ensureCtx(); await actx.resume();
+    stream = await navigator.mediaDevices.getUserMedia({
+      audio:{echoCancellation:S.ec, noiseSuppression:S.ns, autoGainControl:S.agc, channelCount:1}, video:false
+    });
+    clearTimeout(waitTimer);
+    await actx.resume();
+    const tr = stream.getAudioTracks()[0];
+    if (tr){
+      tr.onmute = () => setStatus('시스템이 마이크 입력을 막았습니다. 통화 중인지, 다른 앱이나 보안 앱이 마이크를 쓰는지 확인해 주세요.', true);
+      tr.onunmute = () => reportTrack();
+      tr.onended = () => { if (mode === 'mic') recoverAudio(true); };   // visible → reconnect now; hidden → on return
+    }
+    srcNode = actx.createMediaStreamSource(stream);
+    srcNode.connect(analyser);
+    setFs(actx.sampleRate);
+    mode = 'mic'; frozen = false; silentFrames = 0; silenceWarned = false;
+    resetAvg(); clearSpec(); armAuto(); reportTrack(); requestWake(); updateUI();
+    stallFrames = 0;
+    if (actx.state !== 'running') armTapResume();
+  } catch (err){
+    clearTimeout(waitTimer);
+    stopSources(); mode = 'idle'; updateUI(); setStatus(micErr(err), true);
+  } finally { micStarting = false; }
+}
+async function openFile(file){
+  stopSources();
+  try {
+    ensureCtx(); await actx.resume();
+    setStatus('파일을 읽는 중…');
+    const buf = await file.arrayBuffer();
+    const ab = await new Promise((res, rej) => { const p = actx.decodeAudioData(buf, res, rej); if (p && p.then) p.then(res, rej); });
+    fileNode = actx.createBufferSource(); fileNode.buffer = ab;
+    fileNode.connect(analyser); fileNode.connect(actx.destination);
+    fileName = file.name;
+    fileNode.onended = () => {
+      if (mode !== 'file') return;
+      mode = 'idle'; frozen = false; fileNode = null; updateUI();
+      setStatus(`재생이 끝났습니다 (${fileName}). 마지막 화면을 유지합니다.`);
+    };
+    setFs(actx.sampleRate); resetAvg(); clearSpec(); armAuto();
+    fileNode.start();
+    mode = 'file'; frozen = false; updateUI();
+    setStatus(`파일 재생 중: ${fileName} · ${ab.duration.toFixed(1)}초`);
+  } catch (e){
+    stopSources(); mode = 'idle'; updateUI();
+    setStatus('이 파일을 열 수 없습니다. WAV, MP3, M4A 형식을 사용해 보세요.', true);
+  }
+}
+
+/* ---------- UI ---------- */
+function updateUI(){
+  const chip = $('modeChip'), bm = $('btnMic'), bp = $('btnPause');
+  const label = {demo:'데모', mic:'측정 중', file:'파일', idle:'정지'}[mode];
+  chip.textContent = frozen ? label + ' · 멈춤' : label;
+  chip.classList.toggle('live', mode === 'mic' && !frozen);
+  bm.textContent = mode === 'mic' ? '정지' : '측정 시작';
+  bm.classList.toggle('stop', mode === 'mic');
+  bp.textContent = frozen ? '계속' : '멈춤';
+  bp.setAttribute('aria-pressed', String(frozen));
+  bp.disabled = mode === 'idle';
+}
+$('btnMic').addEventListener('click', () => {
+  if (mode === 'mic'){ stopSources(); mode = 'idle'; frozen = false; updateUI(); setStatus('측정을 멈췄습니다. 마지막 화면을 유지합니다.'); }
+  else startMic();
+});
+$('btnPause').addEventListener('click', () => {
+  if (mode === 'idle') return;
+  if (!frozen && meas) abortMeas('멈춤을 눌러 평균 측정을 취소했습니다.');
+  frozen = !frozen;
+  if (mode === 'file' && actx){ frozen ? actx.suspend() : actx.resume(); }
+  updateUI();
+});
+$('btnHold').addEventListener('click', () => { holdDb.fill(-200); for (let k = 0; k < holdDb.length; k++) holdDb[k] = avgDb[k]; drawFFT(); });
+$('btnFile').addEventListener('click', () => $('fileIn').click());
+$('fileIn').addEventListener('change', e => { const f = e.target.files[0]; e.target.value = ''; if (f) openFile(f); });
+
+function placeSpecCursor(){
+  const el = $('specCur');
+  if (cursorF == null){ el.hidden = true; return; }
+  const u = suFrac(cursorF);
+  if (u < 0 || u > 1){ el.hidden = true; return; }
+  el.hidden = false;
+  el.style.top = ((sG.T + (1 - u)*sG.h)/dpr) + 'px';
+  el.style.left = (sG.L/dpr) + 'px';
+  el.style.right = (sG.R/dpr) + 'px';
+}
+function setCursor(f){ cursorF = f; requestDraw(); }
+
+/* one finger: horizontal drag = cursor, vertical drag = page scroll, tap = cursor, double tap = full view
+   two fingers: pinch = zoom (horizontal spread → frequency, vertical spread → dB), move = pan
+   mouse: drag = cursor, wheel = frequency zoom (over the dB axis or with Shift = dB zoom), Shift/right drag = pan */
+const pts = new Map();
+let gest = null, lastTap = {t:0, x:0, y:0};
+function canvasPt(e){ const r = fcv.getBoundingClientRect(); return {x:(e.clientX - r.left)*dpr, y:(e.clientY - r.top)*dpr}; }
+fcv.addEventListener('contextmenu', e => e.preventDefault());
+fcv.addEventListener('pointerdown', e => {
+  const p = canvasPt(e); pts.set(e.pointerId, p);
+  try { fcv.setPointerCapture(e.pointerId); } catch (_) {}
+  if (pts.size === 1){
+    const panMouse = e.pointerType === 'mouse' && (e.button === 1 || e.button === 2 || e.shiftKey);
+    gest = {type: panMouse ? 'pan' : 'pending', id:e.pointerId, x0:p.x, y0:p.y, lx:p.x, ly:p.y, cy:e.clientY, mouse:e.pointerType === 'mouse'};
+  } else if (pts.size === 2){
+    const [a, b] = [...pts.values()];
+    gest = {type:'pinch', a0:{...a}, b0:{...b}, VU:[...VU], VD:[...VD]};
+  } else gest = {type:'none'};
+  e.preventDefault();
+});
+fcv.addEventListener('pointermove', e => {
+  if (!pts.has(e.pointerId) || !gest) return;
+  const p = canvasPt(e); pts.set(e.pointerId, p);
+  const g = fG;
+  if (gest.type === 'pinch'){
+    if (pts.size < 2) return;
+    const [a, b] = [...pts.values()];
+    const minSep = 40*dpr;
+    const dx0 = Math.abs(gest.a0.x - gest.b0.x), dy0 = Math.abs(gest.a0.y - gest.b0.y);
+    const dx = Math.abs(a.x - b.x), dy = Math.abs(a.y - b.y);
+    const sx = (dx0 > minSep && dx > minSep*0.5) ? dx0/dx : 1;
+    const sy = (dy0 > minSep && dy > minSep*0.5) ? dy0/dy : 1;
+    const cx0 = (gest.a0.x + gest.b0.x)/2 - g.L, cy0 = (gest.a0.y + gest.b0.y)/2 - g.T;
+    const cx = (a.x + b.x)/2 - g.L, cy = (a.y + b.y)/2 - g.T;
+    const [u0, u1] = gest.VU, [d0, d1] = gest.VD;
+    const uc = u0 + (cx0/g.w)*(u1 - u0), su = (u1 - u0)*sx, nu0 = uc - (cx/g.w)*su;
+    const dc = d1 - (cy0/g.h)*(d1 - d0), sd = (d1 - d0)*sy, nd1 = dc + (cy/g.h)*sd;
+    const vert = sy !== 1 || Math.abs(cy - cy0) > 15*dpr;   // vertical spread or drag → manual dB view
+    if (vert) setView(nu0, nu0 + su, nd1 - sd, nd1, true);
+    else setView(nu0, nu0 + su, VD[0], VD[1]);
+    return;
+  }
+  if (e.pointerId !== gest.id) return;
+  if (gest.type === 'pending'){
+    const dx = p.x - gest.x0, dy = p.y - gest.y0;
+    if (Math.hypot(dx, dy) > 6*dpr) gest.type = (gest.mouse || Math.abs(dx) >= Math.abs(dy)) ? 'cursor' : 'scroll';
+  }
+  if (gest.type === 'cursor') setCursor(xf(clamp(p.x - g.L, 0, g.w)));
+  else if (gest.type === 'scroll'){ window.scrollBy(0, gest.cy - e.clientY); gest.cy = e.clientY; }
+  else if (gest.type === 'pan'){
+    const du = -(p.x - gest.lx)/g.w*(VU[1] - VU[0]), dd = (p.y - gest.ly)/g.h*(VD[1] - VD[0]);
+    gest.lx = p.x; gest.ly = p.y;
+    setView(VU[0] + du, VU[1] + du, VD[0] + dd, VD[1] + dd, dd !== 0);
+  }
+});
+function endPointer(e, cancelled){
+  if (!pts.has(e.pointerId)) return;
+  pts.delete(e.pointerId);
+  if (!cancelled && gest && gest.type === 'pending' && e.pointerId === gest.id){
+    const now = performance.now(), p = canvasPt(e);
+    if (now - lastTap.t < 320 && Math.hypot(p.x - lastTap.x, p.y - lastTap.y) < 30*dpr){
+      fullView(); lastTap.t = 0;
+    } else {
+      lastTap = {t:now, x:p.x, y:p.y};
+      const x = p.x - fG.L;
+      if (x >= 0 && x <= fG.w){
+        const near = cursorF != null && Math.abs(fx(cursorF) - p.x) < 18*dpr;
+        setCursor(near ? null : xf(x));
+      }
+    }
+  }
+  if (pts.size === 0) gest = null;
+  else if (gest && gest.type === 'pinch') gest = {type:'none'};
+}
+fcv.addEventListener('pointerup', e => endPointer(e, false));
+fcv.addEventListener('pointercancel', e => endPointer(e, true));
+fcv.addEventListener('wheel', e => {
+  e.preventDefault();
+  const p = canvasPt(e), g = fG, k = Math.exp(clamp(e.deltaY, -200, 200)*0.0015);
+  if (p.x < g.L || e.shiftKey){
+    const cy = clamp(p.y - g.T, 0, g.h), dc = VD[1] - (cy/g.h)*(VD[1] - VD[0]), sd = (VD[1] - VD[0])*k, nd1 = dc + (cy/g.h)*sd;
+    setView(VU[0], VU[1], nd1 - sd, nd1, true);
+  } else {
+    const cx = clamp(p.x - g.L, 0, g.w), uc = VU[0] + (cx/g.w)*(VU[1] - VU[0]), su = (VU[1] - VU[0])*k, nu0 = uc - (cx/g.w)*su;
+    setView(nu0, nu0 + su, VD[0], VD[1]);
+  }
+}, {passive:false});
+$('btnZoom').addEventListener('click', fullView);
+$('btnFftFit').addEventListener('click', () => { if (!fitFft()) setStatus('데이터가 조금 더 쌓인 뒤에 눌러 주세요.'); else setView(VU[0], VU[1], S.dbMin, S.dbMax); });
+$('btnSpecFit').addEventListener('click', () => fitSpec(false));
+$('btnSpecFull').addEventListener('click', () => setSpecView(0, 1));
+
+/* spectrogram: two fingers on the image = frequency zoom/pan, legend drag = shift range, legend pinch = range span,
+   one finger = page scroll, tap = cursor, double tap = full frequency range (on the legend: fit once).
+   mouse: wheel = frequency zoom (on the legend: range span), drag on the legend = shift range */
+const sPts = new Map();
+let sGest = null, sLastTap = {t:0, x:0, y:0};
+function sPt(e){ const r = scv.getBoundingClientRect(); return {x:(e.clientX - r.left)*dpr, y:(e.clientY - r.top)*dpr}; }
+function onLegend(p){ return p.x > sG.L + sG.w; }
+scv.addEventListener('contextmenu', e => e.preventDefault());
+scv.addEventListener('pointerdown', e => {
+  const p = sPt(e); sPts.set(e.pointerId, p);
+  try { scv.setPointerCapture(e.pointerId); } catch (_) {}
+  if (sPts.size === 1) sGest = {type:'pending', id:e.pointerId, x0:p.x, y0:p.y, ly:p.y, cy:e.clientY, legend:onLegend(p), mouse:e.pointerType === 'mouse'};
+  else if (sPts.size === 2){
+    const [a, b] = [...sPts.values()];
+    sGest = {type: onLegend(a) || onLegend(b) ? 'lpinch' : 'pinch', a0:{...a}, b0:{...b}, SU:[...SU], R:[...specRange]};
+  } else sGest = {type:'none'};
+  e.preventDefault();
+});
+scv.addEventListener('pointermove', e => {
+  if (!sPts.has(e.pointerId) || !sGest) return;
+  const p = sPt(e); sPts.set(e.pointerId, p);
+  const g = sG;
+  if (sGest.type === 'pinch' || sGest.type === 'lpinch'){
+    if (sPts.size < 2) return;
+    const [a, b] = [...sPts.values()];
+    const dy0 = Math.abs(sGest.a0.y - sGest.b0.y), dy = Math.abs(a.y - b.y);
+    const k = (dy0 > 30*dpr && dy > 15*dpr) ? dy0/dy : 1;
+    const cy0 = (sGest.a0.y + sGest.b0.y)/2 - g.T, cy = (a.y + b.y)/2 - g.T;
+    if (sGest.type === 'pinch'){
+      const [u0, u1] = sGest.SU, uc = u1 - (cy0/g.h)*(u1 - u0), su = (u1 - u0)*k, nu1 = uc + (cy/g.h)*su;
+      setSpecView(nu1 - su, nu1);
+    } else {
+      const [d0, d1] = sGest.R, dc = d1 - (cy0/g.h)*(d1 - d0), sd = (d1 - d0)*k, nd1 = dc + (cy/g.h)*sd;
+      setSpecRange(nd1 - sd, nd1, false);
+    }
+    return;
+  }
+  if (e.pointerId !== sGest.id) return;
+  if (sGest.type === 'pending' && Math.hypot(p.x - sGest.x0, p.y - sGest.y0) > 6*dpr)
+    sGest.type = sGest.legend ? 'ldrag' : (sGest.mouse ? 'none' : 'scroll');
+  if (sGest.type === 'scroll'){ window.scrollBy(0, sGest.cy - e.clientY); sGest.cy = e.clientY; }
+  else if (sGest.type === 'ldrag'){
+    const dd = (p.y - sGest.ly)/g.h*(specRange[1] - specRange[0]); sGest.ly = p.y;
+    setSpecRange(specRange[0] + dd, specRange[1] + dd, false);
+  }
+});
+function sEnd(e, cancelled){
+  if (!sPts.has(e.pointerId)) return;
+  sPts.delete(e.pointerId);
+  const g = sGest;
+  if (g && (g.type === 'ldrag' || g.type === 'lpinch')) setSpecRange(specRange[0], specRange[1], true);
+  if (!cancelled && g && g.type === 'pending' && e.pointerId === g.id){
+    const now = performance.now(), p = sPt(e);
+    if (now - sLastTap.t < 320 && Math.hypot(p.x - sLastTap.x, p.y - sLastTap.y) < 30*dpr){
+      if (g.legend) fitSpec(false); else setSpecView(0, 1);
+      sLastTap.t = 0;
+    } else {
+      sLastTap = {t:now, x:p.x, y:p.y};
+      if (!g.legend && p.y >= sG.T && p.y <= sG.T + sG.h && p.x >= sG.L){
+        const u = SU[1] - ((p.y - sG.T)/sG.h)*(SU[1] - SU[0]);
+        setCursor(frac2f(u));
+      }
+    }
+  }
+  if (sPts.size === 0) sGest = null;
+  else if (g && (g.type === 'pinch' || g.type === 'lpinch')) sGest = {type:'none'};
+}
+scv.addEventListener('pointerup', e => sEnd(e, false));
+scv.addEventListener('pointercancel', e => sEnd(e, true));
+let wheelSave = 0;
+scv.addEventListener('wheel', e => {
+  e.preventDefault();
+  const p = sPt(e), g = sG, k = Math.exp(clamp(e.deltaY, -200, 200)*0.0015), cy = clamp(p.y - g.T, 0, g.h);
+  if (onLegend(p)){
+    const [d0, d1] = specRange, dc = d1 - (cy/g.h)*(d1 - d0), sd = (d1 - d0)*k, nd1 = dc + (cy/g.h)*sd;
+    setSpecRange(nd1 - sd, nd1, false);
+    clearTimeout(wheelSave); wheelSave = setTimeout(() => setSpecRange(specRange[0], specRange[1], true), 400);
+  } else {
+    const uc = SU[1] - (cy/g.h)*(SU[1] - SU[0]), su = (SU[1] - SU[0])*k, nu1 = uc + (cy/g.h)*su;
+    setSpecView(nu1 - su, nu1);
+  }
+}, {passive:false});
+$('btnCal').addEventListener('click', () => {
+  const ref = parseFloat($('calRef').value);
+  if (meas){ setStatus('평균 측정이 끝난 뒤에 보정해 주세요.', true); return; }
+  if (!isFinite(ref)){ setStatus('기준 레벨을 숫자로 입력해 주세요.', true); return; }
+  if (mode !== 'mic' || !avgCount){ setStatus('마이크로 측정하는 중에 보정을 눌러 주세요.', true); return; }
+  const raw = computeOaspl() - S.cal;               // current OASPL in dBFS
+  const oldCal = S.cal;
+  S.cal = Math.round((ref - raw)*10)/10; S.calSrc = 'ref'; S.calRef = ref;
+  const shift = Math.round((S.cal - oldCal)/5)*5;          // keep the same view of the data
+  S.dbMin += shift; S.dbMax += shift; S.specMin += shift; S.specMax += shift; viewReset('d'); save();
+  fillForm();
+  applyChange('cal'); updateDerived();
+  setStatus(`보정했습니다. 오프셋 ${S.cal.toFixed(1)} dB (현재 OASPL ${raw.toFixed(1)} dBFS → ${ref.toFixed(1)} dB).`);
+});
+
+/* ---------- settings sheet ---------- */
+const sheet = $('sheet'), sheetBg = $('sheetBg');
+function openSheet(){ fillForm(); sheet.hidden = false; sheetBg.hidden = false; $('btnClose').focus(); }
+function closeSheet(){ sheet.hidden = true; sheetBg.hidden = true; $('btnSet').focus(); }
+$('btnSet').addEventListener('click', openSheet);
+$('btnClose').addEventListener('click', closeSheet);
+sheetBg.addEventListener('click', closeSheet);
+document.addEventListener('keydown', e => { if (e.key === 'Escape' && !sheet.hidden) closeSheet(); });
+
+const fields = Array.from(document.querySelectorAll('[data-k]'));
+function fillForm(){
+  for (const el of fields){ const k = el.dataset.k; if (el.type === 'checkbox') el.checked = !!S[k]; else el.value = String(S[k]); }
+  updateDerived();
+}
+function updateDerived(){
+  $('avgOut').textContent = String(S.avg);
+  for (const o of $('s-fftSize').options){
+    const n = +o.value;
+    o.textContent = `${n.toLocaleString()} · Δf ${(fs/n).toFixed(2)} Hz`;
+  }
+  $('fftHint').textContent = `프레임 길이 ${(S.fftSize/fs*1000).toFixed(0)} ms · 길수록 주파수는 촘촘, 시간 반응은 느림`;
+  $('calState').textContent = S.cal === 0 ? 'dBFS에 더하는 값. 0이면 dBFS(상대값)' :
+    S.calSrc === 'est' ? '기본 추정값: 조용한 사무실이 약 40 dB로 읽히는 수준' :
+    S.calSrc === 'ref' ? `기준 레벨 ${S.calRef} dB로 보정함` : '직접 입력한 값';
+  const ACF = N/sumW, ECF = Math.sqrt(N/sumW2);
+  $('winHint').textContent = `진폭 보정 ${ACF.toFixed(3)} · 에너지 보정 ${ECF.toFixed(3)}`;
+  $('oaNote').textContent = `OASPL = 10·log10 Σ (10^(Lk/20) ÷ ${ACF.toFixed(3)} × ${ECF.toFixed(3)})², Lk는 평균된 RMS 라인 레벨, 합산 범위는 표시 주파수 범위`;
+  $('bpfVal').textContent = `BPF = ${S.blades} × ${S.rpm} / 60 = ${bpfHz().toFixed(1)} Hz`;
+}
+function onField(e){
+  const el = e.target, k = el.dataset.k; if (!k) return;
+  if (e.type === 'input' && k !== 'avg') return;
+  let v;
+  if (el.type === 'checkbox') v = el.checked;
+  else if (typeof DEF[k] === 'number'){ v = parseFloat(el.value); if (!isFinite(v)) { el.value = String(S[k]); return; } }
+  else v = el.value;
+  if (k === 'avg') v = Math.round(clamp(v, 1, 32));
+  if (k === 'blades') v = Math.round(clamp(v, 1, 200));
+  if (k === 'harm') v = Math.round(clamp(v, 1, 10));
+  if (k === 'rpm') v = clamp(v, 1, 200000);
+  if (k === 'fMin') v = Math.max(0, v);
+  if ((k === 'dbMax' && v <= S.dbMin + 5) || (k === 'dbMin' && v >= S.dbMax - 5) ||
+      (k === 'specMax' && v <= S.specMin + 5) || (k === 'specMin' && v >= S.specMax - 5) ||
+      (k === 'fMax' && v <= S.fMin) || (k === 'fMin' && v >= S.fMax)){
+    el.value = String(S[k]); setStatus('범위가 맞지 않아 이전 값으로 되돌렸습니다.', true); return;
+  }
+  S[k] = v;
+  if (k === 'cal') S.calSrc = 'manual';
+  if (el.type !== 'checkbox') el.value = String(v);
+  save(); applyChange(k); updateDerived();
+}
+function applyChange(k){
+  if (k === 'agc' || k === 'ns' || k === 'ec'){ if (mode === 'mic') startMic(); return; }
+  if (k === 'calRef') return;
+  if (meas && ['fftSize', 'win', 'scale', 'weight', 'cal'].includes(k)) abortMeas('분석 설정이 바뀌어 평균 측정을 취소했습니다.');
+  if (k === 'fftSize'){ prepN(S.fftSize); prepWin(); prepWeights(); buildMaps(); clearSpec(); }
+  else if (k === 'win' || k === 'scale'){ prepWin(); resetAvg(); }
+  else if (k === 'weight'){ prepWeights(); resetAvg(); }
+  else if (k === 'axis' || k === 'fMin' || k === 'fMax'){ viewReset('u'); SU = [0, 1]; buildMaps(); clearSpec(); cursorF = null; $('btnSpecFull').hidden = true; }
+  else if (k === 'dbMin' || k === 'dbMax'){ viewReset('d'); }
+  else if (k === 'specMin' || k === 'specMax'){ specRange = [S.specMin, S.specMax]; requestSpecRender(); }
+  else if (k === 'speed'){ requestSpecRender(); }
+  else if (k === 'bpfOn' || k === 'blades' || k === 'rpm' || k === 'harm'){ renderSpec(); }
+  else if (k === 'cal'){ resetAvg(); clearSpec(); }
+  else if (k === 'cmap'){ buildLut(); renderSpec(); }
+  findPeaks(); updateReadouts(); updateSQ(); requestDraw();
+}
+$('setForm').addEventListener('change', onField);
+$('setForm').addEventListener('input', onField);
+$('btnReset').addEventListener('click', () => {
+  const inputChanged = S.agc !== DEF.agc || S.ns !== DEF.ns || S.ec !== DEF.ec;
+  S = Object.assign({}, DEF); save();
+  prepN(S.fftSize); prepWin(); prepWeights(); buildLut(); viewReset(); buildMaps(); clearSpec(); cursorF = null; requestDraw();
+  fillForm(); drawFFT(); updateReadouts();
+  if (inputChanged && mode === 'mic') startMic();
+  setStatus('설정을 기본값으로 되돌렸습니다.');
+});
+
+/* ---------- settings sanity check (bad stored values must never stop the page) ---------- */
+const ENUMS = {fftSize:[2048, 4096, 8192, 16384, 32768], win:['hann', 'hamming', 'bh', 'flattop', 'rect'], weight:['A', 'Z'],
+  scale:['rms', 'peak'], fps:[10, 15, 30, 60], axis:['log', 'lin'], cmap:['rainbow', 'inferno', 'viridis', 'gray'],
+  speed:[1, 2, 3, 4], field:['free', 'diffuse'], measDur:[5, 10, 30, 60, 120], calSrc:['est', 'manual', 'ref']};
+function sanitize(){
+  let fixed = false;
+  const reset = k => { S[k] = DEF[k]; fixed = true; };
+  for (const k in DEF){
+    if (typeof S[k] !== typeof DEF[k] || (typeof S[k] === 'number' && !isFinite(S[k]))) reset(k);
+    else if (ENUMS[k] && !ENUMS[k].includes(S[k])) reset(k);
+  }
+  const rng = (k, lo, hi) => { if (S[k] < lo || S[k] > hi) reset(k); };
+  rng('avg', 1, 32); rng('blades', 1, 200); rng('harm', 1, 10); rng('rpm', 1, 200000); rng('cal', -100, 250);
+  rng('fMin', 0, 30000); rng('fMax', 10, 100000); rng('dbMin', -250, 200); rng('dbMax', -250, 250); rng('specMin', -250, 200); rng('specMax', -250, 250);
+  if (S.fMax <= S.fMin){ S.fMin = DEF.fMin; S.fMax = DEF.fMax; fixed = true; }
+  if (S.dbMax <= S.dbMin + 5){ S.dbMin = DEF.dbMin; S.dbMax = DEF.dbMax; fixed = true; }
+  if (S.specMax <= S.specMin + 5){ S.specMin = DEF.specMin; S.specMax = DEF.specMax; fixed = true; }
+  if (fixed) save();
+  return fixed;
+}
+
+/* ---------- boot ---------- */
+try {
+  const fixed = sanitize();
+  readColors();
+  prepN(S.fftSize); prepWin(); prepWeights(); buildLut();
+  sizeCanvases();
+  fillForm(); updateUI(); drawFFT(); updateReadouts(); renderResults(); updateMeasUI();
+  setStatus(fixed ? '저장된 설정 중 잘못된 값을 기본값으로 바꿨습니다. 데모 신호를 보여주는 중입니다.'
+                  : '데모 신호(시로코 팬 모사)를 보여주는 중입니다. 측정 시작을 누르면 마이크 입력으로 바뀝니다.');
+  armAuto();
+  requestAnimationFrame(loop);
+  try { sessionStorage.removeItem('psBootRetry'); } catch (_) {}
+} catch (err){
+  // last resort: clear stored settings once and reload; if that fails too, show the error
+  let retried = false; try { retried = sessionStorage.getItem('psBootRetry') === '1'; } catch (_) { retried = true; }
+  if (!retried){
+    try { sessionStorage.setItem('psBootRetry', '1'); localStorage.removeItem(KEY); } catch (_) {}
+    location.reload();
+  } else showError(`시작하지 못했습니다 · ${err && err.message}`);
+}
+
+let rz = 0;
+function sizeChanged(){
+  const d = Math.min(window.devicePixelRatio || 1, 3);
+  if (d !== dpr) return true;
+  return [fcv, scv, tcv].some(cv => { const r = cv.getBoundingClientRect(); return Math.round(r.width*d) !== cv.width || Math.round(r.height*d) !== cv.height; });
+}
+window.addEventListener('resize', () => {
+  clearTimeout(rz);
+  rz = setTimeout(() => {
+    // mobile browsers fire resize when the address bar shows or hides; the canvases keep their size then
+    if (!sizeChanged()) return;
+    sizeCanvases();
+    requestDraw();
+  }, 150);
+});
+const mq = window.matchMedia ? window.matchMedia('(prefers-color-scheme: dark)') : null;
+if (mq && mq.addEventListener) mq.addEventListener('change', () => { readColors(); renderSpec(); drawFFT(); drawTO(); });
+document.addEventListener('visibilitychange', () => {
+  if (document.visibilityState !== 'visible') return;
+  if (sizeChanged()){ sizeCanvases(); requestDraw(); }
+  if (mode === 'mic'){ requestWake(); recoverAudio(true); }
+  else if (actx && actx.state !== 'running' && mode === 'file' && !frozen) actx.resume().catch(() => {});
+});
+window.addEventListener('pageshow', e => { if (e.persisted && mode === 'mic') recoverAudio(true); });
+})();
+</script>
+</body>
+</html>
