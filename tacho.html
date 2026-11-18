@@ -209,16 +209,15 @@ input[type=checkbox]{width:22px;height:22px;accent-color:var(--trace);margin:0}
     <summary>사용법</summary>
     <ol>
       <li>날개 수를 넣고, 대략의 지령 rpm을 알면 예상 rpm에 넣습니다. 범위가 좁을수록 엉뚱한 값을 덜 잡습니다(모터음이 섞이면 ±15% 이하 권장).</li>
-      <li>팬을 끈 채로 <b>배경 소음</b>을 한 번 누르면 실험실 장비·험 같은 고정 톤을 이후 추정에서 뺍니다.</li>
-      <li>팬을 켜고 <b>측정 시작</b>. 폰을 흡입·토출구에서 10~30 cm에 두되 바람이 마이크에 직접 닿지 않게 합니다.</li>
+      <li><b>측정 시작</b>을 누릅니다. 폰을 흡입·토출구에서 10~30 cm에 두되 바람이 마이크에 직접 닿지 않게 합니다.</li>
       <li>rpm이 일정하면 평균이 쌓이면서 값이 굳고 <b>확정</b>이 뜹니다. rpm을 바꾸면 스스로 감지해 다시 잡습니다.</li>
       <li>값이 의심스러우면 스펙트럼의 ▼가 피크 위에 있는지 보고, 아래 <b>다른 후보</b>를 눌러 바꿀 수 있습니다.</li>
+      <li>옆 장비 소리 때문에 값이 안 잡히면 설정의 <b>배경 소음 기록</b>을 팬을 끈 채로 한 번 해 두세요(보통은 필요 없음).</li>
     </ol>
   </details>
 </div>
 
 <div class="bar"><div class="in">
-  <button id="btnBg" type="button">배경 소음</button>
   <button id="btnMic" class="primary" type="button">측정 시작</button>
   <button id="btnRec" type="button" disabled>기록</button>
 </div></div>
@@ -234,7 +233,8 @@ input[type=checkbox]{width:22px;height:22px;accent-color:var(--trace);margin:0}
     <div class="row"><label for="sN">주파수 분해능<small>정밀은 BPF가 낮은 팬(100 Hz 이하)에 유리, 회전이 흔들리면 기본이 유리</small></label><div class="ctl"><select id="sN"><option value="16384">기본</option><option value="32768">정밀</option></select></div></div>
     <div class="row"><label for="sMains">전원 주파수<small>이 배수(2 kHz 이하)의 피크는 비중을 낮춰 험을 BPF로 오인하지 않게 합니다</small></label><div class="ctl"><select id="sMains"><option value="60">60 Hz</option><option value="50">50 Hz</option><option value="0">끔</option></select></div></div>
   </fieldset>
-  <fieldset><legend>배경 소음</legend>
+  <fieldset><legend>배경 소음 (보통은 필요 없음)</legend>
+    <div class="row"><label for="btnBg">배경 소음 기록<small>값이 안 잡힐 때만. 팬을 끈 상태로 3초 들려주면 그 순음을 이후 추정에서 뺍니다</small></label><div class="ctl"><button id="btnBg" class="mini" type="button">기록</button></div></div>
     <div class="row"><label>제외 중인 배경 톤<small id="bgList">없음</small></label><div class="ctl"><button id="btnBgClr" class="mini" type="button">비우기</button></div></div>
   </fieldset>
   <fieldset><legend>마이크 입력 처리</legend>
@@ -592,7 +592,7 @@ function render(){
     else if (r.state === 'searching'){
       label = '찾는 중'; subTxt = `BPF를 찾는 중 · 평균 ${r.win.toFixed(1)} s`; bar = r.win/S.avg;
       const b = r.cands && r.cands[0];
-      if (b && b.mainsOnly) w.push('찾은 피크가 모두 전원 주파수 배수입니다. 팬을 끄고 배경 소음을 기록하면 구분됩니다.');
+      if (b && b.mainsOnly) w.push('찾은 피크가 모두 전원 주파수 배수입니다. 팬을 끄고 설정의 배경 소음 기록을 하면 구분됩니다.');
       else if (r.win >= S.avg*0.9){
         w.push(S.exp ? '예상 범위 안에서 BPF가 보이지 않습니다. 날개 수와 예상 rpm을 확인하고, 폰을 더 가까이 두세요.' : 'BPF가 보이지 않습니다. 날개 수를 확인하고 폰을 더 가까이 두거나 예상 rpm을 넣어 보세요.');
         if (S.bg.length) w.push('배경을 기록할 때 팬이 돌고 있었다면 설정에서 배경 톤을 비우세요.');
@@ -660,7 +660,7 @@ function drawSpec(){
   if (!sp){ c.textAlign = 'center'; c.textBaseline = 'middle'; c.fillText(mode === 'armed' ? '소리를 모으는 중…' : '측정을 시작하면 표시됩니다', L + w/2, T + h/2); return; }
   const D = sp.D, df = sp.df, k0 = Math.max(1, Math.floor(f0/df)), k1 = Math.min(D.length - 1, Math.ceil(f1/df));
   let top = -300; for (let k = k0; k <= k1; k++) if (D[k] > top) top = D[k];
-  top = Math.ceil(top/5)*5 + 3; const bot = top - 60, y = v => T + (top - clamp(v, bot, top))/(top - bot)*h;
+  top = Math.ceil(top/5)*5 + 10;   // headroom for the ▼ labels const bot = top - 60, y = v => T + (top - clamp(v, bot, top))/(top - bot)*h;
   c.textAlign = 'right'; c.textBaseline = 'middle';
   for (let v = Math.ceil(bot/20)*20; v <= top; v += 20){ const Y = Math.round(y(v)) + .5; c.beginPath(); c.moveTo(L, Y); c.lineTo(L + w, Y); c.stroke(); c.fillText(String(v), L - 4*dpr, Y); }
   // background tones being ignored
@@ -752,6 +752,7 @@ function startBackground(){
   tick();
 }
 $('btnBg').addEventListener('click', () => {
+  closeSheet();
   if (mode === 'armed') startBackground();
   else { pendingBg = true; startMic(); }
 });
@@ -812,7 +813,7 @@ function reportTrack(){
   const f = v => v === undefined ? '확인 불가' : (v ? '켜짐' : '꺼짐');
   $('trackInfo').textContent = `적용된 입력 처리: 노이즈 억제 ${f(s.noiseSuppression)} · 자동 이득 ${f(s.autoGainControl)} · 에코 제거 ${f(s.echoCancellation)} · ${(actx.sampleRate/1000).toFixed(1)} kHz`;
   if (s.noiseSuppression === true) setStatus('브라우저가 노이즈 억제를 끄지 않았습니다. BPF 같은 순음이 깎일 수 있습니다.', true);
-  else setStatus(S.bg.length ? '듣는 중입니다. rpm이 안정되면 값이 굳습니다.' : '듣는 중입니다. 실험실 소음이 크면 팬을 끄고 배경 소음을 한 번 기록해 두세요.');
+  else setStatus(S.bg.length ? '듣는 중입니다. rpm이 안정되면 값이 굳습니다.' : '듣는 중입니다. rpm이 안정되면 값이 굳습니다.');
 }
 async function startMic(auto){
   if (micStarting) return;
